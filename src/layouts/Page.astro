@@ -1,20 +1,18 @@
 ---
 import Header from '@components/Header/index.astro'
 import Footer from '@components/Footer.astro'
+import Head from '@components/Head.astro'
 
 export interface Props {
-	content: {
-		title: string
-	}
+	title: string
 }
 
-const {
-	content: { title },
-} = Astro.props
+const { title } = Astro.props
 ---
 
+<!DOCTYPE html>
 <html lang='en'>
-	<head>
+	<Head title='This is a title' description='This a description'>
 		<style>
 			.title {
 				font-size: 2em;
@@ -25,16 +23,13 @@ const {
 				margin: 1rem 0;
 			}
 		</style>
-	</head>
+	</Head>
 
 	<body>
 		<Header />
 		<main>
-			<article>
-				<h1 class='title'>{title}</h1>
-				<hr />
-				<slot />
-			</article>
+			<h1>{title}</h1>
+			<slot />
 		</main>
 		<Footer />
 	</body>

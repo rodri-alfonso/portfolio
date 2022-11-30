@@ -1,22 +1,9 @@
 ---
-import Head from '@components/Head.astro'
-import Header from '@components/Header/index.astro'
-import Footer from '@components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '@config'
+import Page from 'layouts/Page.astro'
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<span>This an experience item</span>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Page title='Experience'>
+	<section>
+		<span>This an experience item</span>
+	</section>
+</Page>

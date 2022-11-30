@@ -1,34 +1,23 @@
 ---
-import Header from '@components/Header/index.astro'
-import Footer from '@components/Footer.astro'
-import Head from '@components/Head.astro'
+import Header from 'components/Header/index.astro'
+import Footer from 'components/Footer.astro'
+import Head from 'components/Head.astro'
+import 'styles/index.css'
 
 export interface Props {
 	title: string
+	description?: string
 }
 
-const { title } = Astro.props
+const { title, description = 'some description' } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang='en'>
-	<Head title='This is a title' description='This a description'>
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		</style>
-	</Head>
-
+	<Head title={title} description={description} />
 	<body>
 		<Header />
 		<main>
-			<h1>{title}</h1>
 			<slot />
 		</main>
 		<Footer />

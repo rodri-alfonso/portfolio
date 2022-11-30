@@ -1,0 +1,20 @@
+---
+export interface Props {
+	content: {
+		title: string
+		codeLink: string
+		siteLink: string
+		description: string
+		color: string
+	}
+}
+
+const {
+	content: { title, codeLink, siteLink, description, color },
+} = Astro.props
+---
+
+<article>
+	<h1 class='title'>{title}</h1>
+	<p>{description}</p>
+</article>

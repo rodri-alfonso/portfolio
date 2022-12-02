@@ -4,9 +4,18 @@ import Link from './Link.astro'
 
 <header>
 	<nav>
-		<Link href='/'>Home</Link>
+		<Link href='/'>About</Link>
 		<Link href='/experience'>Experience</Link>
 		<Link href='/projects'>Projects</Link>
-		<Link href=''>Let's talk</Link>
+		<Link href='/contact'>Contact</Link>
 	</nav>
 </header>
+
+<style>
+	nav {
+		display: flex;
+		gap: 24px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+</style>

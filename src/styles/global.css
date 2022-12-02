@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700:600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 body {
-	font-family: Manrope, Verdana, sans-serif;
-	padding: 20px;
-	background-color: var(--body-color);
+	font-family: Verdana, sans-serif;
+	font-family: var(--paragraph-font);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: #444;
+
+	padding: 34px 46px;
+	background-color: var(--body-color);
 }
 
 h1,
@@ -16,8 +18,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-a {
+p {
 	padding: 0;
 	margin: 0;
 }

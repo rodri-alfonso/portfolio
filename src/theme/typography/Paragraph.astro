@@ -1,0 +1,28 @@
+---
+export interface Props {
+	primary?: boolean
+}
+
+const { primary } = Astro.props
+---
+
+<p class:list={[{ primary }]}>
+	<slot />
+</p>
+
+<style>
+	p {
+		font-family: var(--paragraph-font);
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--white-50);
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	.primary {
+		color: var(--primary);
+	}
+</style>

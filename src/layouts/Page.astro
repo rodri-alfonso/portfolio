@@ -7,9 +7,10 @@ import 'styles/index.css'
 export interface Props {
 	title: string
 	description?: string
+	className?: string
 }
 
-const { title, description = 'some description' } = Astro.props
+const { title, description = 'some description', className } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ const { title, description = 'some description' } = Astro.props
 	<Head title={title} description={description} />
 	<body>
 		<Header />
-		<main>
+		<main class={className ?? ''}>
 			<slot />
 		</main>
 		<Footer />

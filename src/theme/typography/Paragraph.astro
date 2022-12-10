@@ -1,12 +1,13 @@
 ---
 export interface Props {
 	primary?: boolean
+	className?: string
 }
 
-const { primary } = Astro.props
+const { primary, className } = Astro.props
 ---
 
-<p class:list={[{ primary }]}>
+<p class={`${className ?? ''} ${primary ? 'primary' : ''}`}>
 	<slot />
 </p>
 

@@ -1,13 +1,23 @@
 ---
-const today = new Date();
+import Source from 'assets/icons/source.astro'
+import IconLink from './Header/IconLink.astro'
+
+const today = new Date()
 ---
 
 <footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+	<IconLink href='https://github.com/rodri-alfonso/portfolio'>
+		<Source />
+	</IconLink>
+	&copy; {today.getFullYear()} MIT LICENSE. Made with 💛
 </footer>
 <style>
 	footer {
-		padding: 25px;
-		text-align: center;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+
+		position: absolute;
+		bottom: 10px;
 	}
 </style>

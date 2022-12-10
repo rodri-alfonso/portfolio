@@ -8,7 +8,7 @@ body {
 	overflow-wrap: break-word;
 	color: var(--color-white-50);
 
-	padding: 34px 46px;
+	padding: 0 46px 34px 46px;
 	background-color: var(--color-black-90);
 }
 

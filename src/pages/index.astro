@@ -1,7 +1,63 @@
 ---
 import Page from 'layouts/Page.astro'
+import Paragraph from 'theme/typography/Paragraph.astro'
+import Outlined from 'theme/buttons/Outlined.astro'
+import Primary from 'theme/buttons/Primary.astro'
 ---
 
-<Page title='Im the title required'>
-	<section>hey!!</section>
+<Page title='About me' className='container'>
+	<h1>Hello, I am <strong>Rodrigo</strong></h1>
+
+	<Paragraph className='paragraph'>
+		+3 years of experience as a Frontend developer. I generate impact by <em>getting involved</em> in the design and development
+		cycles, in the creation of efficient, accessible user interfaces and <em>reusable systems.</em>
+	</Paragraph>
+	<section>
+		<Outlined>Download CV</Outlined>
+		<Primary>Let's talk</Primary>
+	</section>
 </Page>
+
+<style>
+	.container {
+		padding: 115px 0 0 120px;
+	}
+
+	h1 {
+		color: var(--white-50);
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 64px;
+		font-weight: 900;
+	}
+	strong {
+		/* font-size: 92px; */
+		color: #673ab7;
+		background-image: -webkit-linear-gradient(0deg, #673ab7 0%, #32aaba 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		text-fill-color: transparent;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.subheading {
+		padding-top: 12px;
+	}
+
+	.paragraph {
+		font-size: 16px;
+		padding-top: 32px;
+		width: 100%;
+		max-width: 659px;
+	}
+
+	em {
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	section {
+		padding-top: 32px;
+		display: flex;
+		gap: 20px;
+	}
+</style>

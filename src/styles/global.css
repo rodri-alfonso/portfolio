@@ -12,6 +12,10 @@ body {
 	background-color: var(--color-black-90);
 }
 
+html {
+	font-size: 100%;
+}
+
 h1,
 h2,
 h3,

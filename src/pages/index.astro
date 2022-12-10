@@ -3,11 +3,11 @@ import Page from 'layouts/Page.astro'
 import Paragraph from 'theme/typography/Paragraph.astro'
 import Outlined from 'theme/buttons/Outlined.astro'
 import Primary from 'theme/buttons/Primary.astro'
+import Title from 'theme/typography/Title.astro'
 ---
 
 <Page title='About me' className='container'>
-	<h1>Hello, I am <strong>Rodrigo</strong></h1>
-
+	<Title>Hello, I am <mark>Rodrigo.</mark></Title>
 	<Paragraph className='paragraph'>
 		+3 years of experience as a Frontend developer. I generate impact by <em>getting involved</em> in the design and development
 		cycles, in the creation of efficient, accessible user interfaces and <em>reusable systems.</em>
@@ -22,21 +22,9 @@ import Primary from 'theme/buttons/Primary.astro'
 	.container {
 		padding: 115px 0 0 120px;
 	}
-
-	h1 {
-		color: var(--color-white-50);
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		font-size: 64px;
-		font-weight: 900;
-	}
-	strong {
-		/* font-size: 92px; */
-		color: #673ab7;
-		background-image: -webkit-linear-gradient(0deg, #673ab7 0%, #32aaba 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		text-fill-color: transparent;
-		-webkit-text-fill-color: transparent;
+	mark {
+		color: var(--color-primary);
+		background-color: unset;
 	}
 
 	.subheading {

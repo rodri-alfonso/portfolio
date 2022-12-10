@@ -1,8 +1,13 @@
 :root {
-	--body-color: #111111;
-	--paragraph-font: 'Manrope';
-	--header-font: 'Lexend';
-	--white-50: #e0dbe2;
-	--primary: #5bcbef;
-	--grey: #c5c2c9;
+	--font-paragraph: 'Manrope';
+	--font-header: 'Lexend';
+
+	--color-grey-50: #c5c2c9;
+	--color-white-50: #e0dbe2;
+	--color-black-90: #111111;
+
+	--color-primary: #ffff00;
+	--color-primary-opacity-10: rgba(255, 255, 0, 0.1);
+	--color-primary-opacity-20: rgba(255, 255, 0, 0.2);
+	--color-primary-opacity-30: #ffff004d;
 }

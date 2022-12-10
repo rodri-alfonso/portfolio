@@ -9,8 +9,10 @@ import Title from 'theme/typography/Title.astro'
 <Page title='About me' className='container'>
 	<Title>Hello, I am <mark>Rodrigo.</mark></Title>
 	<Paragraph className='paragraph'>
-		+3 years of experience as a Frontend developer. I generate impact by <em>getting involved</em> in the design and development
-		cycles, in the creation of efficient, accessible user interfaces and <em>reusable systems.</em>
+		+3 years of experience as a Frontend developer. I generate impact by <strong>getting involved</strong> in the design
+		and development cycles, in the creation of efficient, accessible user interfaces and <strong
+			>reusable systems.</strong
+		>
 	</Paragraph>
 	<section>
 		<Outlined>Download CV</Outlined>
@@ -19,12 +21,21 @@ import Title from 'theme/typography/Title.astro'
 </Page>
 
 <style>
-	.container {
-		padding: 115px 0 0 120px;
-	}
 	mark {
 		color: var(--color-primary);
 		background-color: unset;
+	}
+	section {
+		padding-top: 32px;
+		display: flex;
+		gap: 20px;
+	}
+	strong {
+		color: var(--color-primary);
+	}
+
+	.container {
+		padding: 115px 0 0 120px;
 	}
 
 	.subheading {
@@ -32,20 +43,8 @@ import Title from 'theme/typography/Title.astro'
 	}
 
 	.paragraph {
-		font-size: 16px;
 		padding-top: 32px;
 		width: 100%;
 		max-width: 659px;
-	}
-
-	em {
-		font-weight: 700;
-		font-style: normal;
-	}
-
-	section {
-		padding-top: 32px;
-		display: flex;
-		gap: 20px;
 	}
 </style>

@@ -2,28 +2,35 @@
 export interface Props {
 	primary?: boolean
 	className?: string
+	weight?: 'regular' | 'medium'
 }
 
-const { primary, className } = Astro.props
+const { primary, className, weight = 'regular' } = Astro.props
+
+const setWeightClass = () => {
+	return {
+		regular: 'regular',
+		medium: 'medium',
+	}[weight]
+}
 ---
 
-<p class={`${className ?? ''} ${primary ? 'primary' : ''}`}>
+<p class={`${primary ? 'primary' : ''} ${setWeightClass()} ${className ?? ''}`}>
 	<slot />
 </p>
 
 <style>
 	p {
 		font-family: var(--font-paragraph);
-		font-size: 14px;
-		font-weight: 500;
-		color: var(--color-white-50);
+		font-size: 18px;
 	}
-
-	strong {
-		font-weight: 700;
-	}
-
 	.primary {
-		color: var(--primary);
+		color: var(--color-primary);
+	}
+	.medium {
+		font-weight: 500;
+	}
+	.regular {
+		font-weight: 400;
 	}
 </style>

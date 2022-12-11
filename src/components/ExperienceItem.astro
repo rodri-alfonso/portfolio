@@ -1,0 +1,40 @@
+---
+import BigText from 'theme/typography/BigText.astro'
+import Paragraph from 'theme/typography/Paragraph.astro'
+import SupportText from 'theme/typography/SupportText.astro'
+
+export interface Props {
+	title: string
+	time: string
+	items: Array<string>
+}
+
+const { title, time, items } = Astro.props
+---
+
+<article>
+	<div class='header'>
+		<BigText>{title}</BigText>
+		<SupportText>{time}</SupportText>
+	</div>
+	<Paragraph weight={'medium'} primary>Responsabilities</Paragraph>
+	<ul>
+		{items.map((item) => <li>{item}</li>)}
+	</ul>
+</article>
+
+<style>
+	article {
+		width: 100%;
+		max-width: 1014px;
+		display: grid;
+		gap: 7px;
+	}
+
+	.header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>

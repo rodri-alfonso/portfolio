@@ -1,11 +1,51 @@
 ---
-import Page from 'layouts/Page.astro'
+import Subheading from 'theme/typography/Subheading.astro'
+import ProjectCard from 'components/ProjectCard.astro'
 ---
 
-<Page title='Projects page'>
-	<section>
-		<span>This is a project</span>
-		<span>This is a project</span>
-		<span>This is a project</span>
-	</section>
-</Page>
+<section class='container'>
+	<Subheading>Featured Projects.</Subheading>
+	<div class='projects-container'>
+		<ProjectCard
+			title='tinder clone'
+			description='DEMO Tinder clone. You can match with someone and chat in realtime '
+			demoLink='sd'
+			githubLink='sd'
+		/>
+		<ProjectCard
+			title='tinder clone'
+			description='DEMO Tinder clone. You can match with someone and chat in realtime '
+			demoLink='sd'
+			githubLink='sd'
+		/>
+		<ProjectCard
+			title='tinder clone'
+			description='DEMO Tinder clone. You can match with someone and chat in realtime '
+			demoLink='sd'
+			githubLink='sd'
+		/>
+		<ProjectCard
+			title='tinder clone'
+			description='DEMO Tinder clone. You can match with someone and chat in realtime '
+			demoLink='sd'
+			githubLink='sd'
+		/>
+	</div>
+</section>
+
+<style>
+	.container {
+		width: 100%;
+		max-width: 846px;
+		display: grid;
+		gap: 30px;
+
+		margin-bottom: 300px;
+	}
+
+	.projects-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(410px, auto));
+		gap: 20px;
+	}
+</style>

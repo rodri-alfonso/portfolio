@@ -1,20 +1,59 @@
 ---
+import BigText from 'theme/typography/BigText.astro'
+import Paragraph from 'theme/typography/Paragraph.astro'
+import Link from 'assets/icons/link.astro'
+import Github from 'assets/icons/github.astro'
+
 export interface Props {
-	content: {
-		title: string
-		codeLink: string
-		siteLink: string
-		description: string
-		color: string
-	}
+	title: string
+	githubLink: string
+	demoLink: string
+	description: string
 }
 
-const {
-	content: { title, codeLink, siteLink, description, color },
-} = Astro.props
+const { title, githubLink, demoLink, description } = Astro.props
 ---
 
-<article>
-	<h1 class='title'>{title}</h1>
-	<p>{description}</p>
-</article>
+<div class='card'>
+	<div class='icons'><Link /> <Github /></div>
+	<div class='content'>
+		<BigText>{title}</BigText>
+		<Paragraph primary className='paragraph'>{description}</Paragraph>
+	</div>
+</div>
+
+<style>
+	.card {
+		display: flex;
+		height: 224px;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 22px;
+		border-radius: 11px;
+		background-color: var(--color-blue-dark);
+		border: 1px solid var(--color-blue-dark);
+	}
+	.card:hover {
+		border: 1px solid var(--color-white-50);
+	}
+
+	.card:hover :is(.paragraph) {
+		display: block;
+	}
+
+	.icons {
+		display: flex;
+		gap: 12px;
+	}
+	.content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	.paragraph {
+		display: none;
+	}
+</style>

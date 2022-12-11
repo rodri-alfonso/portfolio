@@ -1,14 +1,14 @@
 ---
 import Source from 'assets/icons/source.astro'
-import IconLink from './Header/IconLink.astro'
+import Link from './Header/Link.astro'
 
 const today = new Date()
 ---
 
 <footer>
-	<IconLink href='https://github.com/rodri-alfonso/portfolio'>
+	<Link href='https://github.com/rodri-alfonso/portfolio' target='_blank' rel='noopener noreferrer'>
 		<Source />
-	</IconLink>
+	</Link>
 	&copy; {today.getFullYear()} MIT LICENSE. Made with 💛
 </footer>
 <style>

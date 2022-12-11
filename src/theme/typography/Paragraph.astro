@@ -1,11 +1,10 @@
 ---
-export interface Props {
+export interface Props extends astroHTML.JSX.HTMLAttributes {
 	primary?: boolean
-	className?: string
 	weight?: 'regular' | 'medium'
 }
 
-const { primary, className, weight = 'regular' } = Astro.props
+const { primary, weight = 'regular', ...props } = Astro.props
 
 const setWeightClass = () => {
 	return {
@@ -15,14 +14,14 @@ const setWeightClass = () => {
 }
 ---
 
-<p class={`${primary ? 'primary' : ''} ${setWeightClass()} ${className ?? ''}`}>
+<p class:list={[{ primary }, { [setWeightClass()]: Boolean(weight) }, props.class]} {...props}>
 	<slot />
 </p>
 
 <style>
 	p {
 		font-family: var(--font-paragraph);
-		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	.primary {
 		color: var(--color-primary);

@@ -2,9 +2,12 @@
 	--font-paragraph: 'Manrope';
 	--font-header: 'Lexend';
 
+	--color-grey-10: #e0dbe2;
 	--color-grey-50: #c5c2c9;
 	--color-white-50: #e0dbe2;
+
 	--color-black-90: #111111;
+	--color-blue-dark: #1c1d28;
 
 	--color-primary: #ffff00;
 	--color-primary-opacity-10: rgba(255, 255, 0, 0.1);

@@ -1,42 +1,13 @@
 ---
-import Javascript from 'assets/icons/javascript.astro'
-import Typescript from 'assets/icons/typescript.astro'
-import React from 'assets/icons/react.astro'
-import Html from 'assets/icons/html.astro'
-import Css from 'assets/icons/css.astro'
-import Vitejs from 'assets/icons/vitejs.astro'
-import Figma from 'assets/icons/figma.astro'
-import Astrobuild from 'assets/icons/astrobuild.astro'
-import Sass from 'assets/icons/sass.astro'
-import Deno from 'assets/icons/deno.astro'
-import Nodejs from 'assets/icons/nodejs.astro'
-import Nextjs from 'assets/icons/nextjs.astro'
-import Git from 'assets/icons/git.astro'
-import Preact from 'assets/icons/preact.astro'
-import Redux from 'assets/icons/redux.astro'
-import Jest from 'assets/icons/jest.astro'
+import { TECHNOLOGIES_ICONS_LIST } from 'config'
 
 import Section from 'layouts/Section.astro'
+import IconOrchester from 'components/IconOrchester.astro'
 ---
 
 <Section title='Main Technologies.'>
 	<div class='container'>
-		<Javascript />
-		<Typescript />
-		<React />
-		<Html />
-		<Css />
-		<Vitejs />
-		<Figma />
-		<Astrobuild />
-		<Sass />
-		<Deno />
-		<Nodejs />
-		<Nextjs />
-		<Git />
-		<Preact />
-		<Redux />
-		<Jest />
+		{TECHNOLOGIES_ICONS_LIST.map((icon) => <IconOrchester icon={icon} class='icon' />)}
 	</div>
 </Section>
 
@@ -45,5 +16,10 @@ import Section from 'layouts/Section.astro'
 		display: flex;
 		gap: 22px;
 		flex-wrap: wrap;
+	}
+
+	.icon:hover {
+		color: var(--color-primary);
+		transition: all 0.3s ease-in-out;
 	}
 </style>

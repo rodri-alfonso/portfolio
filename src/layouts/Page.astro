@@ -21,5 +21,11 @@ const { title, description = 'some description', ...props } = Astro.props
 			<slot />
 		</main>
 		<Footer />
+		<style>
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+		</style>
 	</body>
 </html>

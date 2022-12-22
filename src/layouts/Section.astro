@@ -3,9 +3,10 @@ import Subheading from 'theme/typography/Subheading.astro'
 
 export interface Props extends astroHTML.JSX.HTMLAttributes {
 	title: string
+	sectionId?: string
 }
 
-const { title, ...props } = Astro.props
+const { title, sectionId, ...props } = Astro.props
 ---
 
 <section class={props.class}>
@@ -18,10 +19,4 @@ const { title, ...props } = Astro.props
 		display: grid;
 		gap: 54px;
 	}
-	/* 
-	@media (max-width: 800px) {
-		section {
-			padding: 0;
-		}
-	} */
 </style>

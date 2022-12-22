@@ -1,4 +1,10 @@
-<h2>
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {}
+
+const { ...props } = Astro.props
+---
+
+<h2 {...props}>
 	<slot />
 </h2>
 

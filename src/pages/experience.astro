@@ -1,40 +1,49 @@
 ---
 import ExperienceItem from 'components/ExperienceItem.astro'
 import Section from 'layouts/Section.astro'
+import Page from 'layouts/Page.astro'
+import Technologies from 'components/sections/Technologies.astro'
 ---
 
-<Section class='section' title='Most recent work experience.'>
-	<ExperienceItem
-		title='Frontend Engineer at Movistar'
-		time='Nov, 2021 - Present'
-		items={[
-			'Planning, development, and delivery of B2C functionalities in the "Mi Movistar" application on web and mobile platforms.',
-			'Design, analysis and coding of intuitive, scalable and reusable frontend interfaces.',
-			'Continuous iteration on functionalities with high user concurrences and optimization of experiences based on NPS metrics',
-		]}
-	/>
-	<ExperienceItem
-		title='Frontend developer at Applica'
-		time='Aug, 2021'
-		items={[
-			'SEO friendly and accessible frontend development. Using interfaces with "server side rendering" to optimize response waiting times along with the user experience in a reference application of social networks on a web platform.',
-			'Building responsive and user-friendly features with modern CSS code standards.',
-		]}
-	/>
-	<ExperienceItem
-		title='UI developer at Appia'
-		time='Sep, 2020'
-		items={[
-			'End-to-end frontend development and delivery of functionalities for a personalization and property management application on a web platform.',
-			'Creating reusable components and writing code with SOLID principles.',
-			'Generation and iteration of product flows and interfaces together with the design team.',
-		]}
-	/>
-</Section>
+<Page title='some' description='somee' class='container'>
+	<Section sectionId='experience' class='section' title='Most recent work experience.'>
+		<ExperienceItem
+			title='Frontend Engineer at Movistar'
+			time='Nov, 2021 - Present'
+			items={[
+				'Planning, development, and delivery of B2C functionalities in the "Mi Movistar" application on web and mobile platforms.',
+				'Design, analysis and coding of intuitive, scalable and reusable frontend interfaces.',
+				'Continuous iteration on functionalities with high user concurrences and optimization of experiences based on NPS metrics',
+			]}
+		/>
+		<ExperienceItem
+			title='Frontend developer at Applica'
+			time='Aug, 2021'
+			items={[
+				'SEO friendly and accessible frontend development. Using interfaces with "server side rendering" to optimize response waiting times along with the user experience in a reference application of social networks on a web platform.',
+				'Building responsive and user-friendly features with modern CSS code standards.',
+			]}
+		/>
+		<ExperienceItem
+			title='UI developer at Appia'
+			time='Sep, 2020'
+			items={[
+				'End-to-end frontend development and delivery of functionalities for a personalization and property management application on a web platform.',
+				'Creating reusable components and writing code with SOLID principles.',
+				'Generation and iteration of product flows and interfaces together with the design team.',
+			]}
+		/>
+	</Section>
+	<Technologies />
+</Page>
 
 <style>
 	.section {
 		display: grid;
 		gap: 73px;
+	}
+	.container {
+		display: grid;
+		gap: 110px;
 	}
 </style>

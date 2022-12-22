@@ -1,42 +1,41 @@
 ---
 import ProjectCard from 'components/ProjectCard.astro'
 import Section from 'layouts/Section.astro'
+import Page from 'layouts/Page.astro'
 ---
 
-<Section class='container' title='Featured Projects.'>
-	<div class='projects-container'>
-		<ProjectCard
-			title='tinder clone'
-			description='DEMO Tinder clone. You can match with someone and chat in realtime '
-			demoLink='https://github.com/rodri-alfonso'
-			githubLink='https://github.com/rodri-alfonso'
-		/>
-		<ProjectCard
-			title='tinder clone'
-			description='DEMO Tinder clone. You can match with someone and chat in realtime '
-			demoLink='https://github.com/rodri-alfonso'
-			githubLink='https://github.com/rodri-alfonso'
-		/>
-		<ProjectCard
-			title='tinder clone'
-			description='DEMO Tinder clone. You can match with someone and chat in realtime '
-			demoLink='https://github.com/rodri-alfonso'
-			githubLink='https://github.com/rodri-alfonso'
-		/>
-		<ProjectCard
-			title='tinder clone'
-			description='DEMO Tinder clone. You can match with someone and chat in realtime '
-			demoLink='https://github.com/rodri-alfonso'
-			githubLink='https://github.com/rodri-alfonso'
-		/>
-	</div>
-</Section>
+<Page title='Projects' description=''>
+	<Section title='Featured Projects.'>
+		<div class='projects-container'>
+			<ProjectCard
+				title='tinder clone'
+				description='DEMO Tinder clone. You can match with someone and chat in realtime '
+				demoLink='https://github.com/rodri-alfonso'
+				githubLink='https://github.com/rodri-alfonso'
+			/>
+			<ProjectCard
+				title='tinder clone'
+				description='DEMO Tinder clone. You can match with someone and chat in realtime '
+				demoLink='https://github.com/rodri-alfonso'
+				githubLink='https://github.com/rodri-alfonso'
+			/>
+			<ProjectCard
+				title='tinder clone'
+				description='DEMO Tinder clone. You can match with someone and chat in realtime '
+				demoLink='https://github.com/rodri-alfonso'
+				githubLink='https://github.com/rodri-alfonso'
+			/>
+			<ProjectCard
+				title='tinder clone'
+				description='DEMO Tinder clone. You can match with someone and chat in realtime '
+				demoLink='https://github.com/rodri-alfonso'
+				githubLink='https://github.com/rodri-alfonso'
+			/>
+		</div>
+	</Section>
+</Page>
 
 <style>
-	.container {
-		margin-bottom: 300px;
-	}
-
 	.projects-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));

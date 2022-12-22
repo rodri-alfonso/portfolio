@@ -1,64 +1,21 @@
 ---
 import Page from 'layouts/Page.astro'
-import Paragraph from 'theme/typography/Paragraph.astro'
-import Outlined from 'theme/buttons/Outlined.astro'
-import Primary from 'theme/buttons/Primary.astro'
-import Title from 'theme/typography/Title.astro'
 import Experience from './experience.astro'
 import Technologies from 'components/sections/Technologies.astro'
 import Projects from './projects.astro'
+import Hero from 'components/Hero.astro'
 ---
 
 <Page title='About me' class='container'>
-	<Title>Hello, I am <mark>Rodrigo.</mark></Title>
-	<Paragraph class='paragraph'>
-		+3 years of experience as a Frontend developer. I generate impact by <strong>getting involved</strong> in the design
-		and development cycles, in the creation of efficient, accessible user interfaces and <strong
-			>reusable systems.</strong
-		>
-	</Paragraph>
-	<section>
-		<Outlined>Download CV</Outlined>
-		<Primary>Let's talk</Primary>
-	</section>
-
-	<div class='space'></div>
+	<Hero />
 	<Experience />
-	<div class='space'></div>
 	<Technologies />
-	<div class='space'></div>
 	<Projects />
 </Page>
 
 <style>
-	mark {
-		color: var(--color-primary);
-		background-color: unset;
-	}
-	section {
-		padding-top: 32px;
-		display: flex;
-		gap: 20px;
-	}
-	strong {
-		color: var(--color-primary);
-	}
-
 	.container {
-		padding: 115px 0 0 120px;
-	}
-
-	.subheading {
-		padding-top: 12px;
-	}
-
-	.paragraph {
-		padding-top: 32px;
-		width: 100%;
-		max-width: 659px;
-	}
-
-	.space {
-		height: 250px;
+		display: grid;
+		gap: 220px;
 	}
 </style>

@@ -1,5 +1,4 @@
 ---
-import Subheading from 'theme/typography/Subheading.astro'
 import Javascript from 'assets/icons/javascript.astro'
 import Typescript from 'assets/icons/typescript.astro'
 import React from 'assets/icons/react.astro'
@@ -16,11 +15,11 @@ import Git from 'assets/icons/git.astro'
 import Preact from 'assets/icons/preact.astro'
 import Redux from 'assets/icons/redux.astro'
 import Jest from 'assets/icons/jest.astro'
+
+import Section from 'layouts/Section.astro'
 ---
 
-<section>
-	<Subheading>Main Technologies.</Subheading>
-
+<Section title='Main Technologies.'>
 	<div class='container'>
 		<Javascript />
 		<Typescript />
@@ -39,17 +38,12 @@ import Jest from 'assets/icons/jest.astro'
 		<Redux />
 		<Jest />
 	</div>
-</section>
+</Section>
 
 <style>
-	section {
-		margin-bottom: 300px;
-		display: grid;
-		gap: 30px;
-	}
-
 	.container {
 		display: flex;
 		gap: 22px;
+		flex-wrap: wrap;
 	}
 </style>

@@ -1,10 +1,9 @@
 ---
-import Subheading from 'theme/typography/Subheading.astro'
 import ExperienceItem from 'components/ExperienceItem.astro'
+import Section from 'layouts/Section.astro'
 ---
 
-<section class='section'>
-	<Subheading>Most recent work experience.</Subheading>
+<Section class='section' title='Most recent work experience.'>
 	<ExperienceItem
 		title='Frontend Engineer at Movistar'
 		time='Nov, 2021 - Present'
@@ -31,7 +30,7 @@ import ExperienceItem from 'components/ExperienceItem.astro'
 			'Generation and iteration of product flows and interfaces together with the design team.',
 		]}
 	/>
-</section>
+</Section>
 
 <style>
 	.section {

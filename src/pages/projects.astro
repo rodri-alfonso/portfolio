@@ -1,10 +1,9 @@
 ---
-import Subheading from 'theme/typography/Subheading.astro'
 import ProjectCard from 'components/ProjectCard.astro'
+import Section from 'layouts/Section.astro'
 ---
 
-<section class='container'>
-	<Subheading>Featured Projects.</Subheading>
+<Section class='container' title='Featured Projects.'>
 	<div class='projects-container'>
 		<ProjectCard
 			title='tinder clone'
@@ -31,21 +30,16 @@ import ProjectCard from 'components/ProjectCard.astro'
 			githubLink='https://github.com/rodri-alfonso'
 		/>
 	</div>
-</section>
+</Section>
 
 <style>
 	.container {
-		width: 100%;
-		max-width: 846px;
-		display: grid;
-		gap: 30px;
-
 		margin-bottom: 300px;
 	}
 
 	.projects-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(410px, auto));
+		grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
 		gap: 20px;
 	}
 </style>

@@ -7,6 +7,7 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--color-white-50);
+	margin: 0;
 
 	padding: 0 46px 34px 46px;
 	background-color: var(--color-black-90);
@@ -14,6 +15,7 @@ body {
 
 html {
 	font-size: 100%;
+	scroll-behavior: smooth !important;
 }
 
 h1,

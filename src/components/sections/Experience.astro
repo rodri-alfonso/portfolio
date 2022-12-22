@@ -1,9 +1,10 @@
 ---
 import ExperienceItem from 'components/ExperienceItem.astro'
 import Section from 'layouts/Section.astro'
+import Technologies from './Technologies.astro'
 ---
 
-<Section class='section' title='Most recent work experience.'>
+<Section sectionId='experience' class='section' title='Most recent work experience.'>
 	<ExperienceItem
 		title='Frontend Engineer at Movistar'
 		time='Nov, 2021 - Present'
@@ -31,10 +32,15 @@ import Section from 'layouts/Section.astro'
 		]}
 	/>
 </Section>
+<!-- <Technologies /> -->
 
 <style>
 	.section {
 		display: grid;
 		gap: 73px;
+	}
+	.container {
+		display: grid;
+		gap: 110px;
 	}
 </style>

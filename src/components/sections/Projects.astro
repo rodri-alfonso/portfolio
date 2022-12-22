@@ -3,7 +3,7 @@ import ProjectCard from 'components/ProjectCard.astro'
 import Section from 'layouts/Section.astro'
 ---
 
-<Section class='container' title='Featured Projects.'>
+<Section sectionId='projects' title='Featured Projects.'>
 	<div class='projects-container'>
 		<ProjectCard
 			title='tinder clone'
@@ -33,10 +33,6 @@ import Section from 'layouts/Section.astro'
 </Section>
 
 <style>
-	.container {
-		margin-bottom: 300px;
-	}
-
 	.projects-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));

@@ -6,7 +6,7 @@ import Primary from 'theme/buttons/Primary.astro'
 import Title from 'theme/typography/Title.astro'
 ---
 
-<Section title='' class='container'>
+<Section sectionId='about' title='' class='container'>
 	<Title>Hello, I am <mark>Rodrigo.</mark></Title>
 	<Paragraph class='paragraph'>
 		+3 years of experience as a Frontend developer. I generate impact by <strong>getting involved</strong> in the design
@@ -21,16 +21,16 @@ import Title from 'theme/typography/Title.astro'
 </Section>
 
 <style>
+	.container {
+		gap: 0;
+		padding: 50px 0 100px 0;
+	}
 	mark {
 		color: var(--color-primary);
 		background-color: unset;
 	}
 	strong {
 		color: var(--color-primary);
-	}
-	.container {
-		gap: 0px;
-		padding: 200px 0 150px 0;
 	}
 	.buttons {
 		padding-top: 32px;

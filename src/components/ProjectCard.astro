@@ -5,12 +5,9 @@ import LinkIcon from 'assets/icons/link.astro'
 import Github from 'assets/icons/github.astro'
 import Link from 'components/Header/Link.astro'
 
-export interface Props {
-	title: string
-	githubLink: string
-	demoLink: string
-	description: string
-}
+import type { IProjectCard } from 'types'
+
+export interface Props extends IProjectCard {}
 
 const { title, githubLink, demoLink, description } = Astro.props
 ---

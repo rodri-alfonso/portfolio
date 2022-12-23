@@ -15,3 +15,10 @@ export type IconEnum =
 	| 'preact'
 	| 'redux'
 	| 'jest'
+
+export interface IProjectCard {
+	title: string
+	description: string
+	demoLink: string
+	githubLink: string
+}

@@ -1,15 +1,32 @@
 ---
 import Page from 'layouts/Page.astro'
-import Hero from 'components/Hero.astro'
+import Section from 'layouts/Section.astro'
+import Title from 'theme/typography/Title.astro'
+import BigText from 'theme/typography/BigText.astro'
 ---
 
 <Page title='About me' class='container'>
-	<Hero />
+	<Section sectionId='about' title='' class='content'>
+		<Title>Hello, I am <mark>Rodrigo.</mark></Title>
+		<BigText light>Frontend Engineer - Product builder</BigText>
+	</Section>
 </Page>
 
 <style>
 	.container {
 		display: grid;
 		gap: 80px;
+	}
+	.content {
+		gap: 10px;
+		padding: 50px 0 100px 0;
+		position: relative;
+		top: 100px;
+		left: 50px;
+		width: 100%;
+	}
+	mark {
+		color: var(--color-primary);
+		background-color: unset;
 	}
 </style>

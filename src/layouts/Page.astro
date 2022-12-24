@@ -19,14 +19,14 @@ const { title, description = 'some description', ...props } = Astro.props
 		<main class={props.class}>
 			<Header />
 			<slot />
-			<Footer />
 		</main>
 		<style>
 			main {
 				max-width: 1300px;
 				margin: 0 auto;
 				display: grid;
-				gap: 80px;
+				gap: 70px;
+				padding-bottom: 200px;
 			}
 		</style>
 	</body>

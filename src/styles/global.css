@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	font-family: Verdana, sans-serif;
@@ -7,9 +12,8 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--color-white-50);
-	margin: 0;
 
-	padding: 0 46px 34px 46px;
+	padding: 0 46px;
 	background-color: var(--color-black-90);
 }
 
@@ -18,23 +22,9 @@ html {
 	scroll-behavior: smooth !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	padding: 0;
-	margin: 0;
-}
 img {
 	width: 100%;
 	height: 100%;
-}
-ul,
-li {
-	margin: 0;
 }
 
 ul {

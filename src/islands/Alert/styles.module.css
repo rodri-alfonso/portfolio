@@ -1,0 +1,42 @@
+.modal_container {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	left: 0;
+	display: grid;
+	place-items: center;
+}
+
+.modal_content {
+	padding: 14px 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	border-radius: 10px;
+	overflow: hidden;
+
+	color: var(--color-primary);
+	font-weight: 500;
+
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
+	background-color: rgba(17, 25, 40, 0.75);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.modal_content > span {
+	display: grid;
+	place-items: center;
+	padding: 4px;
+	border-radius: 6px;
+
+	background-color: var(--color-primary-opacity-10);
+}
+
+.modal_content > span:hover {
+	transition: all 0.3s ease-out;
+	background-color: var(--color-primary-opacity-30);
+	cursor: pointer;
+}

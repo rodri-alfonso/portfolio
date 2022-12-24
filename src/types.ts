@@ -16,6 +16,15 @@ export type IconEnum =
 	| 'redux'
 	| 'jest'
 
+export interface IConfettiProps {
+	particleCount?: number
+	startVelocity?: number
+	gravity?: number
+	spread?: number
+	ticks?: number
+	colors?: Array<string>
+}
+
 export interface IProjectCard {
 	title: string
 	description: string

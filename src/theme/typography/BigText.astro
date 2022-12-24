@@ -1,12 +1,27 @@
-<h3>
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	primary?: boolean
+	light?: boolean
+}
+
+const { primary, light } = Astro.props
+---
+
+<h3 class:list={[{ primary }, { light }]}>
 	<slot />
 </h3>
 
 <style>
 	h3 {
-		font-family: var(--font-header);
+		font-family: var(--font-paragraph);
 		font-size: 1.5rem;
 		font-weight: 600;
 		color: var(--color-white-50);
+	}
+	.light {
+		font-weight: 300;
+	}
+	.primary {
+		color: var(--color-primary);
 	}
 </style>

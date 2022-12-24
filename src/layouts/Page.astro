@@ -18,22 +18,15 @@ const { title, description = 'some description', ...props } = Astro.props
 	<body>
 		<main class={props.class}>
 			<Header />
-			<section>
-				<slot />
-			</section>
+			<slot />
 			<Footer />
 		</main>
 		<style>
 			main {
 				max-width: 1300px;
+				margin: 0 auto;
 				display: grid;
 				gap: 80px;
-			}
-
-			section {
-				width: 100%;
-				max-width: 1100px;
-				margin: 0 auto;
 			}
 		</style>
 	</body>

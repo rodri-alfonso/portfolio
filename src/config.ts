@@ -1,8 +1,9 @@
-import type { IconEnum } from 'types'
+import type { IconEnum, IProjectCard } from 'types'
 
 export const SITE_TITLE = 'My personal website.'
 export const SITE_DESCRIPTION = 'Welcome to my website!'
 export const CONTACT_EMAIL = 'rodrigo.alfonso.mm@gmail.com'
+export const CONFETTI_URL_IMPORT = 'https://cdn.skypack.dev/canvas-confetti'
 
 export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 	'javascript',
@@ -23,4 +24,29 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 	'jest',
 ]
 
-export const CONFETTI_URL_IMPORT = 'https://cdn.skypack.dev/canvas-confetti'
+export const PROJECTS_LIST: Array<IProjectCard> = [
+	{
+		title: 'tinder clone',
+		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
+		demoLink: 'https://github.com/rodri-alfonso',
+		githubLink: 'https://github.com/rodri-alfonso',
+	},
+	{
+		title: 'tinder clone',
+		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
+		demoLink: 'https://github.com/rodri-alfonso',
+		githubLink: 'https://github.com/rodri-alfonso',
+	},
+	{
+		title: 'tinder clone',
+		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
+		demoLink: 'https://github.com/rodri-alfonso',
+		githubLink: 'https://github.com/rodri-alfonso',
+	},
+	{
+		title: 'tinder clone',
+		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
+		demoLink: 'https://github.com/rodri-alfonso',
+		githubLink: 'https://github.com/rodri-alfonso',
+	},
+]

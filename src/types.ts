@@ -24,3 +24,10 @@ export interface IConfettiProps {
 	ticks?: number
 	colors?: Array<string>
 }
+
+export interface IProjectCard {
+	title: string
+	description: string
+	demoLink: string
+	githubLink: string
+}

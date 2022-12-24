@@ -15,3 +15,12 @@ export type IconEnum =
 	| 'preact'
 	| 'redux'
 	| 'jest'
+
+export interface IConfettiProps {
+	particleCount?: number
+	startVelocity?: number
+	gravity?: number
+	spread?: number
+	ticks?: number
+	colors?: Array<string>
+}

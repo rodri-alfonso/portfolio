@@ -3,9 +3,10 @@ import Link from './Link.astro'
 import Github from 'assets/icons/github.astro'
 import Linkedin from 'assets/icons/linkedin.astro'
 import Brand from 'assets/brand.astro'
+import Contact from 'islands/Contact'
 ---
 
-<header>
+<header id='header-id'>
 	<Link href='/#' class='link-icon brand'>
 		<Brand />
 	</Link>
@@ -13,7 +14,9 @@ import Brand from 'assets/brand.astro'
 		<Link href='/'>about</Link>
 		<Link href='/experience'>experience</Link>
 		<Link href='/projects'>projects</Link>
-		<Link href='/#contact'>contact</Link>
+		<Contact client:load>
+			<Link href={null}>contact</Link>
+		</Contact>
 		<div class='divider'></div>
 		<Link class='link-icon' href='https://github.com/rodri-alfonso' target='_blank' rel='noopener noreferrer'>
 			<Github primary />

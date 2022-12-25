@@ -15,6 +15,10 @@ function Alert(props: IAlertProps) {
 		gravity: 0.5,
 		spread: 70,
 		ticks: 140,
+		origin: {
+			y: 0.3,
+			x: 0.5,
+		},
 	}
 
 	useEffect(() => {

@@ -16,6 +16,11 @@ export type IconEnum =
 	| 'redux'
 	| 'jest'
 
+interface Origin {
+	x: number
+	y: number
+}
+
 export interface IConfettiProps {
 	particleCount?: number
 	startVelocity?: number
@@ -23,6 +28,7 @@ export interface IConfettiProps {
 	spread?: number
 	ticks?: number
 	colors?: Array<string>
+	origin?: Origin
 }
 
 export interface IProjectCard {

@@ -1,0 +1,63 @@
+---
+export interface Props extends astroHTML.JSX.DialogHTMLAttributes {}
+
+const { ...props } = Astro.props
+---
+
+<dialog {...props}>
+	<section class='container'>
+		<a href='/'>About</a>
+		<a href='/experience'>Experience</a>
+		<a href='/projects'>Projects</a>
+	</section>
+</dialog>
+
+<style>
+	dialog {
+		position: absolute;
+		width: 100%;
+		top: 70px;
+		border-radius: 12px;
+
+		animation-name: appear;
+		animation-duration: 0.3s;
+
+		backdrop-filter: blur(16px) saturate(180%);
+		-webkit-backdrop-filter: blur(16px) saturate(180%);
+		background-color: rgba(17, 25, 40, 0.8);
+		border: 1px solid rgba(255, 255, 255, 0.125);
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 100px 0;
+		gap: 30px;
+	}
+
+	a {
+		font-family: var(--font-header);
+		font-size: 2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: var(--color-primary);
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	a:active {
+		transform: scale(0.9);
+		transition: all 0.3s ease-in-out;
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+</style>

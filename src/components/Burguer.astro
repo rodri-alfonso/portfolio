@@ -1,0 +1,63 @@
+---
+export interface Props {
+	id?: string
+}
+
+const { id } = Astro.props
+---
+
+<input type='checkbox' id={id} class='menu-burguer' />
+<label for={id} class='container'>
+	<div class='bar top'></div>
+	<div class='bar middle'></div>
+	<div class='bar bottom'></div>
+</label>
+
+<style>
+	.menu-burguer {
+		display: none;
+	}
+	.container {
+		z-index: -1;
+		width: 22px;
+		height: 16px;
+		cursor: pointer;
+		position: relative;
+		color: var(--color-primary);
+
+		place-items: center;
+	}
+
+	.bar {
+		position: absolute;
+		height: 2px;
+		background-color: currentColor;
+		width: 100%;
+		transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+	}
+
+	.bottom {
+		bottom: 0;
+	}
+
+	.middle {
+		top: 7px;
+	}
+
+	.menu-burguer:checked + label div:first-child {
+		transform: rotateZ(-45deg);
+		top: 7px;
+	}
+
+	.menu-burguer:checked + label div:last-child {
+		transform: rotateZ(45deg);
+		top: 7px;
+	}
+
+	.menu-burguer:checked + label div:nth-child(2) {
+		transform: rotateZ(45deg);
+		top: 7px;
+	}
+</style>
+
+<script></script>

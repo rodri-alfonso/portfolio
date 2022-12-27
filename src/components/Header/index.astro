@@ -4,13 +4,15 @@ import Github from 'assets/icons/github.astro'
 import Linkedin from 'assets/icons/linkedin.astro'
 import Brand from 'assets/brand.astro'
 import Contact from 'islands/Contact'
+import Menu from 'components/Menu.astro'
+import Burguer from 'components/Burguer.astro'
 ---
 
 <header id='header-id'>
 	<Link href='/#' class='link-icon brand'>
 		<Brand />
 	</Link>
-	<nav>
+	<nav class='nav-desktop'>
 		<Link href='/'>about</Link>
 		<Link href='/experience'>experience</Link>
 		<Link href='/projects'>projects</Link>
@@ -30,7 +32,32 @@ import Contact from 'islands/Contact'
 			<Linkedin />
 		</Link>
 	</nav>
+	<nav class='nav-mobile'>
+		<Contact client:load>
+			<Link href={null}>contact</Link>
+		</Contact>
+
+		<Link href={null} id='burguer-button'>
+			<Burguer id='burguer-icon' />
+		</Link>
+		<Menu id='menu' />
+	</nav>
 </header>
+
+<script>
+	const menuRef = document.getElementById('menu') as HTMLDialogElement
+	const buttonRef = document.getElementById('burguer-button') as HTMLElement
+
+	const iconRef = document.getElementById('burguer-icon') as HTMLInputElement
+
+	buttonRef.addEventListener('click', () => {
+		if (iconRef.checked) iconRef.checked = false
+		else iconRef.checked = true
+
+		if (menuRef.open) menuRef.open = false
+		else menuRef.open = true
+	})
+</script>
 
 <style>
 	header {
@@ -47,11 +74,14 @@ import Contact from 'islands/Contact'
 		backdrop-filter: blur(8.3px);
 		-webkit-backdrop-filter: blur(8.3px);
 	}
-	nav {
+	.nav-desktop {
 		display: flex;
 		gap: 12px;
 		justify-content: flex-end;
 		align-items: center;
+	}
+	.nav-mobile {
+		display: none;
 	}
 	.divider {
 		height: 20px;
@@ -69,5 +99,15 @@ import Contact from 'islands/Contact'
 
 	.brand {
 		background-color: unset;
+	}
+
+	@media (max-width: 800px) {
+		.nav-desktop {
+			display: none;
+		}
+		.nav-mobile {
+			display: flex;
+			gap: 12px;
+		}
 	}
 </style>

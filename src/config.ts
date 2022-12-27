@@ -28,27 +28,21 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 export const PROJECTS_LIST: Array<IProjectCard> = [
 	{
 		title: 'tinder clone',
-		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
-		demoLink: 'https://github.com/rodri-alfonso',
-		githubLink: 'https://github.com/rodri-alfonso',
+		description: 'Demo of Tinder web based on mobile only to swipe, match and chat in realtime.',
+		demoLink: 'https://tinder-clone-pink.vercel.app/login',
+		githubLink: 'https://github.com/rodri-alfonso/tinder-clone-public',
 	},
 	{
-		title: 'tinder clone',
-		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
-		demoLink: 'https://github.com/rodri-alfonso',
-		githubLink: 'https://github.com/rodri-alfonso',
+		title: 'instagram clone',
+		description: 'Demo of the Instagram feed, login, logout. Also create a post, comment and like it.',
+		demoLink: 'https://instagram-clone-liard-six.vercel.app',
+		githubLink: 'https://github.com/rodri-alfonso/instagram-clone-public',
 	},
 	{
-		title: 'tinder clone',
-		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
-		demoLink: 'https://github.com/rodri-alfonso',
-		githubLink: 'https://github.com/rodri-alfonso',
-	},
-	{
-		title: 'tinder clone',
-		description: 'DEMO Tinder clone. You can match with someone and chat in realtime ',
-		demoLink: 'https://github.com/rodri-alfonso',
-		githubLink: 'https://github.com/rodri-alfonso',
+		title: 'whatsapp clone',
+		description: 'Demo of WhatsApp web to create a chat with any email and chat with messages in realtime.',
+		demoLink: 'https://whatsapp-clone-private.vercel.app',
+		githubLink: 'https://github.com/rodri-alfonso/whatsapp-clone-public',
 	},
 ]
 

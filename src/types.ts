@@ -37,3 +37,10 @@ export interface IProjectCard {
 	demoLink: string
 	githubLink: string
 }
+
+export interface IExperienceItem {
+	title: string
+	fromTo: string
+	responsabilities: Array<string>
+	accomplishments: Array<string>
+}

@@ -19,8 +19,8 @@ const { id } = Astro.props
 	}
 	.container {
 		z-index: -1;
-		width: 22px;
-		height: 16px;
+		width: 2.2rem;
+		height: 1.6rem;
 		cursor: pointer;
 		position: relative;
 		color: var(--color-primary);
@@ -30,7 +30,7 @@ const { id } = Astro.props
 
 	.bar {
 		position: absolute;
-		height: 2px;
+		height: 0.2rem;
 		background-color: currentColor;
 		width: 100%;
 		transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
@@ -41,22 +41,22 @@ const { id } = Astro.props
 	}
 
 	.middle {
-		top: 7px;
+		top: 0.7rem;
 	}
 
 	.menu-burguer:checked + label div:first-child {
 		transform: rotateZ(-45deg);
-		top: 7px;
+		top: 0.7rem;
 	}
 
 	.menu-burguer:checked + label div:last-child {
 		transform: rotateZ(45deg);
-		top: 7px;
+		top: 0.7rem;
 	}
 
 	.menu-burguer:checked + label div:nth-child(2) {
 		transform: rotateZ(45deg);
-		top: 7px;
+		top: 0.7rem;
 	}
 </style>
 

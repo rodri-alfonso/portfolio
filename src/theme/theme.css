@@ -15,4 +15,5 @@
 	--color-primary-opacity-30: #ffff004d;
 
 	--scale-down: scale(0.9);
+	--transition-primary: all 0.3s ease-in-out;
 }

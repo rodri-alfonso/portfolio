@@ -1,6 +1,6 @@
 .modal_container {
 	position: absolute;
-	top: 80px;
+	top: 8rem;
 	right: 0;
 	left: 0;
 	display: grid;
@@ -8,35 +8,36 @@
 }
 
 .modal_content {
-	padding: 14px 16px;
+	padding: 1.4rem 1.6rem;
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 1rem;
 
-	border-radius: 10px;
+	border-radius: 1rem;
 	overflow: hidden;
 
 	color: var(--color-primary);
+	font-size: 1.4rem;
 	font-weight: 500;
 
-	backdrop-filter: blur(16px) saturate(180%);
-	-webkit-backdrop-filter: blur(16px) saturate(180%);
+	backdrop-filter: blur(1.6rem) saturate(180%);
+	-webkit-backdrop-filter: blur(1.6rem) saturate(180%);
 	background-color: rgba(17, 25, 40, 0.75);
-	border-radius: 12px;
+	border-radius: 1.2rem;
 	border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .modal_content > span {
 	display: grid;
 	place-items: center;
-	padding: 4px;
-	border-radius: 6px;
+	padding: 0.4rem;
+	border-radius: 0.6rem;
 
 	background-color: var(--color-primary-opacity-10);
 }
 
 .modal_content > span:hover {
-	transition: all 0.3s ease-out;
+	transition: var(--transition-primary);
 	background-color: var(--color-primary-opacity-30);
 	cursor: pointer;
 }

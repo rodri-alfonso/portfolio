@@ -29,3 +29,14 @@ img {
 ul {
 	padding-left: 2rem;
 }
+
+button {
+	border: none;
+	background: unset;
+	padding: 0;
+	border-radius: 1rem;
+}
+
+* :focus {
+	outline: 2px solid var(--color-primary);
+}

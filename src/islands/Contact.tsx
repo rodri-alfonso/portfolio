@@ -18,14 +18,14 @@ function Contact({ ...props }) {
 	}
 
 	return (
-		<div onClick={handleCopy}>
+		<button onClick={handleCopy}>
 			{props.children}
 			{modal &&
 				createPortal(
 					<Alert isConffeti isEphemeral title='Copied email to clipboard!' onClose={() => setModal(false)} />,
 					document.getElementById(HEADER_REFERENCE_ID) as HTMLElement
 				)}
-		</div>
+		</button>
 	)
 }
 

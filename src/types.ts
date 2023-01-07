@@ -6,7 +6,7 @@ export type IconEnum =
 	| 'css'
 	| 'vitejs'
 	| 'figma'
-	| 'astro'
+	| 'astrobuild'
 	| 'sass'
 	| 'deno'
 	| 'nodejs'

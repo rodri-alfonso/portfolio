@@ -1,51 +1,19 @@
 ---
 import type { IconEnum } from 'types'
-
-import Javascript from 'assets/icons/javascript.astro'
-import Typescript from 'assets/icons/typescript.astro'
-import React from 'assets/icons/react.astro'
-import Html from 'assets/icons/html.astro'
-import Css from 'assets/icons/css.astro'
-import Vitejs from 'assets/icons/vitejs.astro'
-import Figma from 'assets/icons/figma.astro'
-import Astrobuild from 'assets/icons/astrobuild.astro'
-import Sass from 'assets/icons/sass.astro'
-import Deno from 'assets/icons/deno.astro'
-import Nodejs from 'assets/icons/nodejs.astro'
-import Nextjs from 'assets/icons/nextjs.astro'
-import Git from 'assets/icons/git.astro'
-import Preact from 'assets/icons/preact.astro'
-import Redux from 'assets/icons/redux.astro'
-import Jest from 'assets/icons/jest.astro'
-
 export interface Props extends astroHTML.JSX.HTMLAttributes {
 	icon: IconEnum
+	width: string
+	height: string
+	primary: boolean
 }
 
-const { icon, ...props } = Astro.props
+const { icon, width, height, primary, ...props } = Astro.props
 ---
 
 <span {...props}>
 	{
-		() => {
-			return {
-				javascript: <Javascript />,
-				typescript: <Typescript />,
-				react: <React />,
-				html: <Html />,
-				css: <Css />,
-				vitejs: <Vitejs />,
-				figma: <Figma />,
-				astro: <Astrobuild />,
-				sass: <Sass />,
-				deno: <Deno />,
-				nodejs: <Nodejs />,
-				nextjs: <Nextjs />,
-				git: <Git />,
-				preact: <Preact />,
-				redux: <Redux />,
-				jest: <Jest />,
-			}[icon]
-		}
+		await import(`../assets/icons/${icon}.astro`).then(({ default: Component }) => {
+			return <Component width={width} height={height} primary={primary} />
+		})
 	}
 </span>

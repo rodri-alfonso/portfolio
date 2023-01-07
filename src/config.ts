@@ -14,7 +14,7 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 	'css',
 	'vitejs',
 	'figma',
-	'astro',
+	'astrobuild',
 	'sass',
 	'deno',
 	'nodejs',

@@ -3,9 +3,10 @@ import Link from './Link.astro'
 import Github from 'assets/icons/github.astro'
 import Linkedin from 'assets/icons/linkedin.astro'
 import Brand from 'assets/brand.astro'
-import Contact from 'islands/Contact'
+// import Contact from 'islands/Contact'
 import Menu from 'components/Menu.astro'
 import Burguer from 'components/Burguer.astro'
+import Contact from 'components/Contact/index.astro'
 ---
 
 <header id='header-id'>
@@ -16,7 +17,7 @@ import Burguer from 'components/Burguer.astro'
 		<Link href='/'>about</Link>
 		<Link href='/experience'>experience</Link>
 		<Link href='/projects'>projects</Link>
-		<Contact client:load>
+		<Contact>
 			<Link href={null}>contact</Link>
 		</Contact>
 		<div class='divider'></div>
@@ -33,7 +34,7 @@ import Burguer from 'components/Burguer.astro'
 		</Link>
 	</nav>
 	<nav class='nav-mobile'>
-		<Contact client:load>
+		<Contact>
 			<Link href={null}>contact</Link>
 		</Contact>
 
@@ -51,11 +52,8 @@ import Burguer from 'components/Burguer.astro'
 	const iconRef = document.getElementById('burguer-icon') as HTMLInputElement
 
 	buttonRef.addEventListener('click', () => {
-		if (iconRef.checked) iconRef.checked = false
-		else iconRef.checked = true
-
-		if (menuRef.open) menuRef.open = false
-		else menuRef.open = true
+		iconRef.checked = !iconRef.checked
+		menuRef.open = !menuRef.open
 	})
 </script>
 

@@ -2,9 +2,9 @@
 import type { IconEnum } from 'types'
 export interface Props extends astroHTML.JSX.HTMLAttributes {
 	icon: IconEnum
-	width: string
-	height: string
-	primary: boolean
+	width?: string
+	height?: string
+	primary?: boolean
 }
 
 const { icon, width, height, primary, ...props } = Astro.props

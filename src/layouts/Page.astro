@@ -8,6 +8,7 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
 	description: string
 }
 
+export const prerender = true
 const { title, description, ...props } = Astro.props
 ---
 

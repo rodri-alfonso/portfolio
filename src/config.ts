@@ -1,10 +1,21 @@
-import type { IconEnum, IProjectCard, IExperienceItem } from 'types'
+import type { IconEnum, IProjectCard, IExperienceItem, IConfettiProps } from 'types'
 
 export const SITE_TITLE = 'My personal website.'
 export const SITE_DESCRIPTION = 'Welcome to my website!'
 export const CONTACT_EMAIL = 'rodrigo.alfonso.mm@gmail.com'
-export const CONFETTI_URL_IMPORT =
-	'https://cdn.skypack.dev/pin/canvas-confetti@v1.6.0-t438JJTXIbBReqvLtDua/mode=imports,min/optimized/canvas-confetti.js'
+
+export const DEFAULT_ALERT_LIFETIME = 2000
+export const DEFAULT_CONFETTI_CONFIG: IConfettiProps = {
+	particleCount: 32,
+	startVelocity: 38,
+	gravity: 0.5,
+	spread: 70,
+	ticks: 140,
+	origin: {
+		y: 0.3,
+		x: 0.5,
+	},
+}
 
 export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 	'javascript',

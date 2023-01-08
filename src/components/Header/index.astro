@@ -1,61 +1,19 @@
 ---
 import Link from './Link.astro'
-import Github from 'assets/icons/github.astro'
-import Linkedin from 'assets/icons/linkedin.astro'
-import Brand from 'assets/brand.astro'
-// import Contact from 'islands/Contact'
-import Menu from 'components/Menu.astro'
-import Burguer from 'components/Burguer.astro'
-import Contact from 'components/Contact/index.astro'
+import IconOrchester from 'components/IconOrchester.astro'
+import NavMobile from './NavMobile.astro'
+import NavDesktop from './NavDesktop.astro'
+import Alert from 'components/Alert/index.astro'
 ---
 
 <header id='header-id'>
 	<Link href='/#' class='link-icon brand'>
-		<Brand />
+		<IconOrchester icon='brand' />
 	</Link>
-	<nav class='nav-desktop'>
-		<Link href='/'>about</Link>
-		<Link href='/experience'>experience</Link>
-		<Link href='/projects'>projects</Link>
-		<Contact>
-			<Link href={null}>contact</Link>
-		</Contact>
-		<div class='divider'></div>
-		<Link class='link-icon' href='https://github.com/rodri-alfonso' target='_blank' rel='noopener noreferrer'>
-			<Github primary />
-		</Link>
-		<Link
-			class='link-icon'
-			href='https://www.linkedin.com/in/rodrigo-alfonso-/'
-			target='_blank'
-			rel='noopener noreferrer'
-		>
-			<Linkedin />
-		</Link>
-	</nav>
-	<nav class='nav-mobile'>
-		<Contact>
-			<Link href={null}>contact</Link>
-		</Contact>
-
-		<Link href={null} id='burguer-button'>
-			<Burguer id='burguer-icon' />
-		</Link>
-		<Menu id='menu' />
-	</nav>
+	<NavDesktop />
+	<NavMobile />
+	<Alert id='alert' />
 </header>
-
-<script>
-	const menuRef = document.getElementById('menu') as HTMLDialogElement
-	const buttonRef = document.getElementById('burguer-button') as HTMLElement
-
-	const iconRef = document.getElementById('burguer-icon') as HTMLInputElement
-
-	buttonRef.addEventListener('click', () => {
-		iconRef.checked = !iconRef.checked
-		menuRef.open = !menuRef.open
-	})
-</script>
 
 <style>
 	header {
@@ -72,20 +30,6 @@ import Contact from 'components/Contact/index.astro'
 		backdrop-filter: blur(8.3px);
 		-webkit-backdrop-filter: blur(8.3px);
 	}
-	.nav-desktop {
-		display: flex;
-		gap: 1.2rem;
-		justify-content: flex-end;
-		align-items: center;
-	}
-	.nav-mobile {
-		display: none;
-	}
-	.divider {
-		height: 2rem;
-		border: 1px solid var(--color-primary-opacity-30);
-	}
-
 	.link-icon {
 		background-color: var(--color-primary-opacity-10);
 		border-radius: 0.8rem;
@@ -97,15 +41,5 @@ import Contact from 'components/Contact/index.astro'
 
 	.brand {
 		background-color: unset;
-	}
-
-	@media (max-width: 800px) {
-		.nav-desktop {
-			display: none;
-		}
-		.nav-mobile {
-			display: flex;
-			gap: 1.2rem;
-		}
 	}
 </style>

@@ -1,0 +1,48 @@
+---
+import Link from './Link.astro'
+import Menu from 'components/Menu.astro'
+import Burguer from 'components/Burguer.astro'
+---
+
+<nav class='nav-mobile'>
+	<button id='contact-mobile'>
+		<Link href={null}>contact</Link>
+	</button>
+
+	<Link href={null} id='burguer-link'>
+		<Burguer id='burguer-icon' />
+	</Link>
+	<Menu id='menu' />
+</nav>
+
+<script>
+	import { openAlertOnButtonClick } from 'utils'
+
+	const linkRef = document.getElementById('burguer-link') as HTMLElement
+
+	linkRef.addEventListener('click', () => {
+		const menuRef = document.getElementById('menu') as HTMLDialogElement
+		const iconRef = document.getElementById('burguer-icon') as HTMLInputElement
+
+		menuRef.open = !menuRef.open
+		iconRef.checked = !iconRef.checked
+	})
+
+	const contactRef = document.getElementById('contact-mobile') as HTMLButtonElement
+	const alertRef = document.getElementById('alert') as HTMLDialogElement
+
+	openAlertOnButtonClick(contactRef, alertRef)
+</script>
+
+<style>
+	.nav-mobile {
+		display: none;
+	}
+
+	@media (max-width: 800px) {
+		.nav-mobile {
+			display: flex;
+			gap: 1.2rem;
+		}
+	}
+</style>

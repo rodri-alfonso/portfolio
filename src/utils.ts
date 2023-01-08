@@ -1,12 +1,24 @@
-import { CONFETTI_URL_IMPORT } from 'config'
 import type { IConfettiProps } from 'types'
+import CanvasConfetti from 'canvas-confetti'
+import { DEFAULT_CONFETTI_CONFIG, DEFAULT_ALERT_LIFETIME } from 'config'
 
-export const addConfetti = (config?: IConfettiProps) => {
-	import(CONFETTI_URL_IMPORT).then(({ default: CanvasConfetti }) => {
-		CanvasConfetti(config)
-	})
+export const createConfetti = (config: IConfettiProps = DEFAULT_CONFETTI_CONFIG) => {
+	CanvasConfetti(config)
 }
 
 export const copyToClipboard = async (text: string) => {
 	return navigator.clipboard.writeText(text)
+}
+
+export const openAlertOnButtonClick = (buttonRef: HTMLButtonElement, alertRef: HTMLDialogElement) => {
+	buttonRef.addEventListener('click', () => {
+		buttonRef.disabled = true
+		alertRef.open = true
+		createConfetti()
+
+		setTimeout(() => {
+			alertRef.open = false
+			buttonRef.disabled = false
+		}, DEFAULT_ALERT_LIFETIME)
+	})
 }

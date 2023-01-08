@@ -1,12 +1,15 @@
 export type IconEnum =
 	| 'javascript'
+	| 'brand'
 	| 'typescript'
 	| 'react'
 	| 'html'
 	| 'css'
+	| 'github'
+	| 'link'
 	| 'vitejs'
 	| 'figma'
-	| 'astro'
+	| 'astrobuild'
 	| 'sass'
 	| 'deno'
 	| 'nodejs'
@@ -15,6 +18,8 @@ export type IconEnum =
 	| 'preact'
 	| 'redux'
 	| 'jest'
+	| 'linkedin'
+	| 'source'
 
 interface Origin {
 	x: number

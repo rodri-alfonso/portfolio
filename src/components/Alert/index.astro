@@ -1,0 +1,59 @@
+---
+export interface Props extends astroHTML.JSX.DialogHTMLAttributes {}
+
+const { ...props } = Astro.props
+---
+
+<dialog {...props}>
+	<section class='container'>
+		<span>Copied Email to clipboard!</span>
+	</section>
+</dialog>
+
+<style>
+	dialog {
+		position: absolute;
+		width: 100%;
+		top: 7rem;
+		border-radius: 1.2rem;
+
+		animation-name: appear;
+		animation-duration: 0.3s;
+
+		border: none;
+		background: unset;
+	}
+
+	section {
+		padding: 1.4rem 1.6rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		width: 200px;
+		margin: auto;
+
+		border-radius: 1rem;
+		overflow: hidden;
+
+		color: var(--color-primary);
+		font-size: 1.4rem;
+		font-weight: 500;
+		display: grid;
+		place-items: center;
+
+		backdrop-filter: blur(1.6rem) saturate(180%);
+		-webkit-backdrop-filter: blur(1.6rem) saturate(180%);
+		background-color: rgba(17, 25, 40, 0.75);
+		border-radius: 1.2rem;
+		border: 1px solid rgba(255, 255, 255, 0.125);
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+</style>

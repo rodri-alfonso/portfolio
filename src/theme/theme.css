@@ -1,6 +1,6 @@
 :root {
-	--font-paragraph: 'Manrope';
-	--font-header: 'Lexend';
+	--font-paragraph: 'Manrope', sans-serif;
+	--font-header: 'Lexend', sans-serif;
 
 	--color-grey-10: #e0dbe2;
 	--color-grey-50: #c5c2c9;

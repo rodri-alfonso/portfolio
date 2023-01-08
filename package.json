@@ -7,19 +7,20 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
+		"preview": "sudo npm run build && sudo deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/deno": "^3.0.0",
-		"@astrojs/mdx": "^0.11.6",
-		"@astrojs/rss": "^1.0.3",
-		"@astrojs/sitemap": "^1.0.0",
-		"astro": "^1.9.0"
+		"@astrojs/deno": "3.0.0",
+		"@astrojs/mdx": "0.11.6",
+		"@astrojs/rss": "1.0.3",
+		"@astrojs/sitemap": "1.0.0",
+		"astro": "1.9.0",
+		"astro-compress": "1.1.25",
+		"canvas-confetti": "1.6.0"
 	},
 	"devDependencies": {
-		"@astrojs/react": "^1.2.2",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"@astrojs/react": "1.2.2",
+		"@types/canvas-confetti": "1.6.0"
 	}
 }

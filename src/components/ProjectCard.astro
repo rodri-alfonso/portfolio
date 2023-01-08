@@ -1,9 +1,8 @@
 ---
 import BigText from 'theme/typography/BigText.astro'
 import Paragraph from 'theme/typography/Paragraph.astro'
-import LinkIcon from 'assets/icons/link.astro'
-import Github from 'assets/icons/github.astro'
 import Link from 'components/Header/Link.astro'
+import IconOrchester from './IconOrchester.astro'
 
 import type { IProjectCard } from 'types'
 
@@ -15,10 +14,10 @@ const { title, githubLink, demoLink, description } = Astro.props
 <div class='card'>
 	<div class='icons'>
 		<Link class='link-icon' href={demoLink} target='_blank' rel='noopener noreferrer'>
-			<LinkIcon height='30' width='30' />
+			<IconOrchester icon='link' height='30' width='30' />
 		</Link>
 		<Link class='link-icon' href={githubLink} target='_blank' rel='noopener noreferrer'>
-			<Github height='30' width='30' />
+			<IconOrchester icon='github' height='30' width='30' />
 		</Link>
 	</div>
 	<div class='content'>

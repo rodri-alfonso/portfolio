@@ -11,16 +11,14 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/deno": "3.0.0",
-		"@astrojs/mdx": "0.11.6",
 		"@astrojs/rss": "1.0.3",
 		"@astrojs/sitemap": "1.0.0",
+		"@astrojs/vercel": "^2.4.0",
 		"astro": "1.9.0",
 		"astro-compress": "1.1.25",
 		"canvas-confetti": "1.6.0"
 	},
 	"devDependencies": {
-		"@astrojs/react": "1.2.2",
 		"@types/canvas-confetti": "1.6.0"
 	}
 }

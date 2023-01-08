@@ -7,7 +7,6 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "sudo npm run build && sudo deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
 		"astro": "astro"
 	},
 	"dependencies": {

@@ -1,8 +1,6 @@
 ---
 import Page from 'layouts/Page.astro'
-import Section from 'layouts/Section.astro'
-import Title from 'theme/typography/Title.astro'
-import BigText from 'theme/typography/BigText.astro'
+import About from 'components/sections/About.astro'
 import Experience from 'components/sections/Experience.astro'
 import Projects from 'components/sections/Projects.astro'
 ---
@@ -12,10 +10,7 @@ import Projects from 'components/sections/Projects.astro'
 	description='<strong>Rodrigo Alfonso.</strong> I build efficient user interfaces and <strong>reusable systems.</strong> I mainly focusing on being the nexus of interface design and development <strong>to provide the best user experience</strong> between functionality and "look and feel".'
 	class='container'
 >
-	<Section sectionId='about' title='' class='content'>
-		<Title>Hello, I am <mark>Rodrigo.</mark></Title>
-		<BigText light>Frontend Engineer - UI Developer</BigText>
-	</Section>
+	<About />
 	<Experience />
 	<Projects />
 </Page>
@@ -62,31 +57,5 @@ import Projects from 'components/sections/Projects.astro'
 	.container {
 		display: grid;
 		gap: 8rem;
-	}
-	.content {
-		gap: 1rem;
-		padding: 5rem 0 10rem 0;
-		position: relative;
-		z-index: -1;
-		top: 10rem;
-		left: 5rem;
-		width: 100%;
-		margin-bottom: 30rem;
-	}
-
-	.content:before {
-		margin-top: 10rem;
-		height: auto;
-	}
-
-	mark {
-		color: var(--color-primary);
-		background-color: unset;
-	}
-
-	@media (max-width: 80em) {
-		.content {
-			position: static;
-		}
 	}
 </style>

@@ -9,7 +9,7 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
 const { title, sectionId, ...props } = Astro.props
 ---
 
-<section id={sectionId} class={props.class}>
+<section id={sectionId} class={props.class} section-query={sectionId}>
 	{title && <Subheading>{title}</Subheading>}
 	<slot />
 </section>
@@ -22,5 +22,12 @@ const { title, sectionId, ...props } = Astro.props
 
 		display: grid;
 		gap: 5.4rem;
+	}
+
+	section:before {
+		content: '';
+		display: block;
+		height: 60px;
+		margin-top: -60px;
 	}
 </style>

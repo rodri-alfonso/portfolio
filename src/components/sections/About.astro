@@ -5,24 +5,31 @@ import BigText from 'theme/typography/BigText.astro'
 ---
 
 <Section sectionId='about' title='' class='container'>
-	<Title>Hello, I am <mark>Rodrigo.</mark></Title>
-	<BigText light>Frontend Engineer - UI Developer</BigText>
+	<div class='content'>
+		<Title>Hello, I am <mark>Rodrigo.</mark></Title>
+		<BigText light>Frontend Engineer - UI Developer</BigText>
+	</div>
 </Section>
 
 <style>
 	.container {
-		gap: 1rem;
-		padding: 5rem 0 10rem 0;
-		position: relative;
 		z-index: -1;
-		top: 10rem;
-		left: 5rem;
 		width: 100%;
-		margin-bottom: 30rem;
+		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.container:before {
-		margin-top: 4rem;
+		margin-top: 0rem;
+	}
+
+	.content {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+		padding-bottom: 18rem;
 	}
 
 	mark {
@@ -33,6 +40,10 @@ import BigText from 'theme/typography/BigText.astro'
 	@media (max-width: 80em) {
 		.container {
 			position: static;
+			margin-bottom: 10rem;
+		}
+		.container:before {
+			margin-top: 0rem;
 		}
 	}
 </style>

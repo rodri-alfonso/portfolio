@@ -10,11 +10,11 @@ function handleObserver(entries: any) {
 		entries.forEach((entry: any) => {
 			let id = entry.target.attributes['section-query'].value
 
-			if (entry.intersectionRatio < 0.52) return
+			if (entry.intersectionRatio < 0.21) return
 			if (prevId === id) return
 
 			const anchorRef = document.getElementById(`link-${id}`) as HTMLAnchorElement
-			// window.history.replaceState(null, '', '#' + id)
+			window.history.replaceState(null, '', '#' + id)
 
 			if (prevAnchorRef) prevAnchorRef.classList.remove('active')
 			anchorRef.classList.add('active')

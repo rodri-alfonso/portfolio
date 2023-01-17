@@ -2,6 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+* :focus,
+:active {
+	outline-color: var(--color-primary);
+
+	-webkit-tap-highlight-color: transparent;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
 
 html {
 	font-size: 62.5%;
@@ -16,7 +24,7 @@ body {
 	overflow-wrap: break-word;
 	color: var(--color-white-50);
 
-	padding: 0 4.6rem;
+	padding: var(--layout-padding);
 	background-color: var(--color-black-90);
 }
 
@@ -34,13 +42,4 @@ button {
 	background: unset;
 	padding: 0;
 	border-radius: 1rem;
-}
-
-* :focus,
-:active {
-	outline-color: var(--color-primary);
-
-	-webkit-tap-highlight-color: transparent;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
 }

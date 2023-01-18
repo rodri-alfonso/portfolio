@@ -1,0 +1,49 @@
+---
+import Section from 'layouts/Section.astro'
+import Title from 'theme/typography/Title.astro'
+import BigText from 'theme/typography/BigText.astro'
+---
+
+<Section title='' class='container'>
+	<div class='content'>
+		<Title>Hello, I am <mark>Rodrigo.</mark></Title>
+		<BigText light>Frontend Engineer - UI Developer</BigText>
+	</div>
+</Section>
+
+<style>
+	.container {
+		z-index: -1;
+		width: 100%;
+		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.container:before {
+		margin-top: 0rem;
+	}
+
+	.content {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+		padding-bottom: 18rem;
+	}
+
+	mark {
+		color: var(--color-primary);
+		background-color: unset;
+	}
+
+	@media (max-width: 80em) {
+		.container {
+			position: static;
+			margin-bottom: 10rem;
+		}
+		.container:before {
+			margin-top: 0rem;
+		}
+	}
+</style>

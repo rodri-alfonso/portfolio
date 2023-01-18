@@ -4,6 +4,12 @@ export const SITE_TITLE = 'My personal website.'
 export const SITE_DESCRIPTION = 'Welcome to my website!'
 export const CONTACT_EMAIL = 'rodrigo.alfonso.mm@gmail.com'
 
+export const EXTERNAL_LINKS = {
+	LINKEDIN: 'https://www.linkedin.com/in/rodrigo-alfonso-/',
+	GITHUB: 'https://github.com/rodri-alfonso',
+	RESUME: 'https://drive.google.com/file/d/1g5MwIx6r1YemQ2SyaAIVvxida0FXEmWw/view?usp=sharing',
+}
+
 export const DEFAULT_ALERT_LIFETIME = 2000
 export const DEFAULT_CONFETTI_CONFIG: IConfettiProps = {
 	particleCount: 32,

@@ -1,22 +1,50 @@
 ---
 import ExperienceItem from 'components/ExperienceItem.astro'
 import Section from 'layouts/Section.astro'
+import Paragraph from 'theme/typography/Paragraph.astro'
 import Technologies from 'components/sections/Technologies.astro'
 import { EXPERIENCES_LIST } from 'config'
+import Link from 'components/Header/Link.astro'
+import { EXTERNAL_LINKS } from 'config'
 ---
 
 <Section sectionId='experience' class='section' title='Most recent work experience.'>
-	{
-		EXPERIENCES_LIST.map((experience) => (
-			<ExperienceItem title={experience.title} time={experience.fromTo} items={experience.responsabilities} />
-		))
-	}
+	<div class='information'>
+		<Paragraph>To see all the details:</Paragraph>
+		<Link target='_blank' rel='noopener noreferrer' href={EXTERNAL_LINKS.RESUME} class='link'>
+			<Paragraph>check resume</Paragraph>
+		</Link>
+	</div>
+	<div class='content'>
+		{
+			EXPERIENCES_LIST.map((experience) => (
+				<ExperienceItem title={experience.title} time={experience.fromTo} items={experience.responsabilities} />
+			))
+		}
+	</div>
+
 	<Technologies />
 </Section>
 
 <style>
 	.section {
+		gap: 0.6rem;
+	}
+	.section:before {
+		margin-top: 2rem;
+	}
+	.content {
 		display: grid;
 		gap: 7.3rem;
+		padding-top: 6.2rem;
+	}
+	.link {
+		text-transform: lowercase;
+		text-decoration: underline;
+		padding: 1rem;
+	}
+	.information {
+		display: flex;
+		align-items: center;
 	}
 </style>

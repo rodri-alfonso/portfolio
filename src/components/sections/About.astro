@@ -5,18 +5,34 @@ import Paragraph from 'theme/typography/Paragraph.astro'
 
 <Section sectionId='about' title='About.' class='container'>
 	<Paragraph class='paragraph'>
-		+3 years of experience as a Frontend developer. I generate impact by getting involved in the design and development
-		cycles, in the creation of efficient, accessible user interfaces and reusable systems. Proactive mindset and focused
-		on the iteration and delivery of quality and high-impact products.
+		<em> +3 years of experience</em> as a Frontend developer. I generate impact by <em>getting involved</em> in the design
+		and development cycles, in the creation of efficient, accessible user interfaces and <em>reusable systems.</em>
+		<br />
+		<br />
+		I mainly focusing on UI systems and <em>being the nexus</em> of interface design and development to provide <em
+			>the best user experience</em
+		> between functionality and "look and feel".
+		<br />
+		<br />
+		Proactive mindset and focused on the iteration and delivery of quality and <em>high-impact products.</em>
 	</Paragraph>
 </Section>
 
 <style>
+	.container {
+		margin-bottom: -4rem;
+	}
 	.container:before {
 		margin-top: 2rem;
 	}
 
 	.paragraph {
 		max-width: 75ch;
+	}
+
+	em {
+		font-weight: 500;
+		color: var(--color-primary);
+		font-style: normal;
 	}
 </style>

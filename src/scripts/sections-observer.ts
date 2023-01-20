@@ -1,7 +1,8 @@
 import { debounce } from 'utils'
 
-const DEFAULT_DEBOUNCE_TIME = 100
+const DEBOUNCE_TIME = 100
 const SECTION_QUERY_INDEX = 2
+const HERO_HASH = 'hero'
 
 const sectionsRef = Array.from(document.querySelectorAll('[section-query]')) as Array<HTMLElement>
 
@@ -13,12 +14,15 @@ function handleObserver(entries: Array<IntersectionObserverEntry>) {
 		entries.forEach((entry: IntersectionObserverEntry) => {
 			let hash: string = entry.target.attributes[SECTION_QUERY_INDEX].value
 
-			if (entry.intersectionRatio === 0) {
-				prevAnchorRef && prevAnchorRef.classList.remove('active')
+			const isOverHero = hash === HERO_HASH
+			const isOutIntersection = entry.intersectionRatio === 0
+
+			if (prevHash === hash) return prevAnchorRef && prevAnchorRef.classList.add('active')
+			if (isOverHero) prevAnchorRef && prevAnchorRef.classList.remove('active')
+			if (isOutIntersection || isOverHero) {
 				window.history.replaceState(null, '', '/')
 				return
 			}
-			if (prevHash === hash) return
 
 			const anchorRef = document.getElementById(`link-${hash}`) as HTMLAnchorElement
 
@@ -30,7 +34,7 @@ function handleObserver(entries: Array<IntersectionObserverEntry>) {
 			prevAnchorRef = anchorRef
 			prevHash = hash
 		})
-	}, DEFAULT_DEBOUNCE_TIME)
+	}, DEBOUNCE_TIME)
 }
 
 const observer = new IntersectionObserver(handleObserver, {

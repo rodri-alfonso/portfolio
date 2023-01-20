@@ -42,6 +42,8 @@ const { id } = Astro.props
 
 	.middle {
 		top: 0.7rem;
+		width: 75%;
+		right: 0;
 	}
 
 	.menu-burguer:checked + label div:first-child {
@@ -55,6 +57,7 @@ const { id } = Astro.props
 	}
 
 	.menu-burguer:checked + label div:nth-child(2) {
+		width: 100%;
 		transform: rotateZ(45deg);
 		top: 0.7rem;
 	}

@@ -1,25 +1,21 @@
 ---
 import Link from './Link.astro'
 import IconOrchester from 'components/IconOrchester.astro'
+import { EXTERNAL_LINKS } from 'config'
 ---
 
 <nav class='nav-desktop'>
-	<Link href='/'>about</Link>
-	<Link href='/experience'>experience</Link>
-	<Link href='/projects'>projects</Link>
+	<Link href='/#about'>about</Link>
+	<Link href='/#experience'>experience</Link>
+	<Link href='/#projects'>projects</Link>
 	<button id='contact-desktop'>
-		<Link href={null}>contact</Link>
+		<Link>contact</Link>
 	</button>
 	<div class='divider'></div>
-	<Link class='link-icon' href='https://github.com/rodri-alfonso' target='_blank' rel='noopener noreferrer'>
+	<Link class='link-icon' href={EXTERNAL_LINKS.GITHUB} target='_blank' rel='noopener noreferrer'>
 		<IconOrchester icon='github' primary />
 	</Link>
-	<Link
-		class='link-icon'
-		href='https://www.linkedin.com/in/rodrigo-alfonso-/'
-		target='_blank'
-		rel='noopener noreferrer'
-	>
+	<Link class='link-icon' href={EXTERNAL_LINKS.LINKEDIN} target='_blank' rel='noopener noreferrer'>
 		<IconOrchester icon='linkedin' />
 	</Link>
 </nav>

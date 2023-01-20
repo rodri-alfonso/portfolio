@@ -1,0 +1,54 @@
+---
+import ExperienceItem from 'components/ExperienceItem.astro'
+import Section from 'layouts/Section.astro'
+import Paragraph from 'theme/typography/Paragraph.astro'
+import { EXPERIENCES_LIST } from 'config'
+import Link from 'components/Header/Link.astro'
+import { EXTERNAL_LINKS } from 'config'
+---
+
+<Section sectionId='experience' class='section' title='Most recent work experience.'>
+	<div class='information'>
+		<Paragraph>To see details:</Paragraph>
+		<Link target='_blank' rel='noopener noreferrer' href={EXTERNAL_LINKS.RESUME} class='link'>
+			<Paragraph>check resume</Paragraph>
+		</Link>
+	</div>
+	<div class='content'>
+		{
+			EXPERIENCES_LIST.map((experience) => (
+				<ExperienceItem title={experience.title} time={experience.fromTo} items={experience.responsabilities} />
+			))
+		}
+	</div>
+</Section>
+
+<style>
+	.section {
+		gap: 0.6rem;
+	}
+	.section:before {
+		margin-top: 2rem;
+	}
+	.content {
+		display: grid;
+		gap: 7.3rem;
+		padding-top: 6.2rem;
+	}
+	.link {
+		padding: 1rem 0;
+		text-transform: lowercase;
+		text-decoration: underline;
+	}
+	.link:hover {
+		padding: 1rem;
+	}
+	.information {
+		display: flex;
+		gap: 0.6rem;
+		align-items: center;
+	}
+	.technologies {
+		padding-top: 7rem;
+	}
+</style>

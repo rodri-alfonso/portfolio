@@ -19,7 +19,13 @@ const { title, time, items } = Astro.props
 	</div>
 	<Paragraph weight={'medium'} primary>Responsabilities</Paragraph>
 	<ul>
-		{items.map((item) => <li>{item}</li>)}
+		{
+			items.map((item) => (
+				<li>
+					<Paragraph weight={'medium'}>{item}</Paragraph>
+				</li>
+			))
+		}
 	</ul>
 </article>
 

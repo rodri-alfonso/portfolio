@@ -1,0 +1,31 @@
+---
+import ProjectCard from 'components/ProjectCard.astro'
+import Section from 'layouts/Section.astro'
+import { PROJECTS_LIST } from 'config'
+---
+
+<Section sectionId='projects' title='Featured Projects.' class='container'>
+	<div class='content'>
+		{
+			PROJECTS_LIST.map((project) => (
+				<ProjectCard
+					title={project.title}
+					description={project.description}
+					demoLink={project.demoLink}
+					githubLink={project.githubLink}
+				/>
+			))
+		}
+	</div>
+</Section>
+
+<style>
+	.container::before {
+		margin-top: 0;
+	}
+	.content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+		gap: 2rem;
+	}
+</style>

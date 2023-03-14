@@ -38,6 +38,12 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 
 export const PROJECTS_LIST: Array<IProjectCard> = [
 	{
+		title: 'notion avatar generator',
+		description: 'Notion avatar generator by picture, using Cloudinary and IA recognition.',
+		demoLink: 'https://notionify.vercel.app/',
+		githubLink: 'https://github.com/juanespinola05/notionify',
+	},
+	{
 		title: 'tinder clone',
 		description: 'Demo of Tinder web based on mobile only to swipe, match and chat in realtime.',
 		demoLink: 'https://tinder-clone-pink.vercel.app/login',

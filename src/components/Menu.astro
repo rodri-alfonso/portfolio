@@ -6,9 +6,9 @@ const { ...props } = Astro.props
 
 <dialog {...props}>
 	<section class='container'>
-		<a href='/'>About</a>
-		<a href='/experience'>Experience</a>
-		<a href='/projects'>Projects</a>
+		<a href='/#about'>About</a>
+		<a href='/#experience'>Experience</a>
+		<a href='/#projects'>Projects</a>
 	</section>
 </dialog>
 
@@ -20,7 +20,7 @@ const { ...props } = Astro.props
 		border-radius: 1.2rem;
 
 		animation-name: appear;
-		animation-duration: 0.3s;
+		animation-duration: 0.2s;
 
 		backdrop-filter: blur(1.6rem) saturate(180%);
 		-webkit-backdrop-filter: blur(1.6rem) saturate(180%);

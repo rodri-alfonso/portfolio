@@ -16,4 +16,14 @@
 
 	--scale-down: scale(0.9);
 	--transition-primary: all 0.3s ease-in-out;
+
+	--layout-max-width: 130rem;
+	--layout-padding: 0 4.6rem;
+}
+
+/* mobile/tablet */
+@media (max-width: 80em) {
+	:root {
+		--layout-padding: 0 2rem;
+	}
 }

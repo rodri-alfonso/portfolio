@@ -8,7 +8,6 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
 	description: string
 }
 
-export const prerender = true
 const { title, description, ...props } = Astro.props
 ---
 
@@ -22,7 +21,7 @@ const { title, description, ...props } = Astro.props
 		</main>
 		<style>
 			main {
-				max-width: 130rem;
+				max-width: var(--layout-max-width);
 				margin: 0 auto;
 				display: grid;
 				gap: 7rem;

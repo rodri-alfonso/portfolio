@@ -1,0 +1,19 @@
+---
+import type { IconEnum } from 'types'
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	icon: IconEnum
+	width?: string
+	height?: string
+	primary?: boolean
+}
+
+const { icon, width, height, primary, ...props } = Astro.props
+---
+
+<picture {...props}>
+	{
+		await import(`../assets/icons/${icon}.astro`).then(({ default: Component }) => {
+			return <Component width={width} height={height} primary={primary} />
+		})
+	}
+</picture>

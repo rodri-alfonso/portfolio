@@ -2,7 +2,7 @@
 
 # Hello, I am **Rodrigo.**
 
-### About.
+### About
 
 +3 years of experience as a Frontend developer. I generate impact by getting involved in the design and development cycles, in the creation of efficient, accessible user interfaces and reusable systems. Proactive mindset and focused on the iteration and delivery of quality and high-impact products.
 

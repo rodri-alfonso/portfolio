@@ -1,0 +1,23 @@
+---
+import Header from 'components/Header/index.astro'
+import Head from 'components/Head.astro'
+import '../styles/index.css'
+
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	title: string
+	description: string
+}
+
+const { title, description, ...props } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+	<Head title={title} description={description} />
+	<body class='py-3 px-4'>
+		<main class='max-w-screen-xl mx-auto grid gap-28 pb-56'>
+			<Header />
+			<slot />
+		</main>
+	</body>
+</html>

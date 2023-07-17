@@ -1,7 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Page from 'layouts/Page.astro'
+import About from 'sections/About.astro'
+import Experience from 'sections/Experience.astro'
+import Hero from 'sections/Hero.astro'
+import Projects from 'sections/Projects.astro'
+import Technologies from 'sections/Technologies.astro'
 ---
 
-<Layout title='Welcome to Astro.'>
-	<main>xs</main>
-</Layout>
+<Page
+	title='Rodrigo Alfonso | Frontend Engineer & UI Developer'
+	description='<strong>Rodrigo Alfonso.</strong> I build efficient user interfaces and <strong>reusable systems.</strong> I mainly focusing on being the nexus of interface design and development <strong>to provide the best user experience</strong> between functionality and "look and feel".'
+>
+	<Hero />
+	<About />
+	<Experience />
+	<Technologies />
+	<Projects />
+</Page>
+
+<script is:inline type='module'>
+	import '../scripts/sections-observer'
+</script>

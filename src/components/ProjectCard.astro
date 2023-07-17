@@ -1,0 +1,38 @@
+---
+import IconOrchester from './IconOrchester.astro'
+
+import type { IProjectCard } from 'types'
+
+export interface Props extends IProjectCard {}
+
+const { title, githubLink, demoLink, description } = Astro.props
+---
+
+<div
+	class='grid gap-6 items-center border-solid border borde-gray-800 rounded-xl hover:bg-gray-50 p-4 transition-all hover:-translate-y-1'
+>
+	<div class='flex justify-between items-center gap-2'>
+		<h2 class='text-gray-800 font-semibold md:text-xl text-lg capitalize'>{title}</h2>
+
+		<div class='flex items-center text-gray-800'>
+			<a
+				href={demoLink}
+				target='_blank'
+				rel='noopener noreferrer'
+				class='p-2 text-gray-700 hover:bg-gray-200 rounded-lg'
+			>
+				<IconOrchester icon='link' class='[&>*]:w-7 [&>*]:h-7' />
+			</a>
+			<a
+				href={githubLink}
+				target='_blank'
+				rel='noopener noreferrer'
+				class='p-2 text-gray-700 hover:bg-gray-200 rounded-lg'
+			>
+				<IconOrchester icon='github' class='[&>*]:w-7 [&>*]:h-7' />
+			</a>
+		</div>
+	</div>
+
+	<p class='text-gray-600'>{description}</p>
+</div>

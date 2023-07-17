@@ -1,0 +1,30 @@
+---
+export interface Props {
+	title: string
+	time: string
+	items: Array<string>
+}
+
+const { title, time, items } = Astro.props
+---
+
+<article class='md:hover:bg-gray-100 rounded-xl md:p-6'>
+	<div class='md:flex items-center justify-between'>
+		<h1 class='font-bold text-gray-700 md:text-3xl text-2xl'>{title}</h1>
+		<span class='font-bold text-gray-600 text-base'>{time}</span>
+	</div>
+	<p
+		class='mt-6 rounded-md bg-gray-400 w-36 py-0.5 grid place-items-center md:text-sm text-xs font-semibold uppercase text-white'
+	>
+		Responsabilities
+	</p>
+	<ul class='pt-2 pl-4 font-semibold text-gray-700 md:text-lg text-base'>
+		{
+			items.map((item) => (
+				<li class='list-disc'>
+					<p>{item}</p>
+				</li>
+			))
+		}
+	</ul>
+</article>

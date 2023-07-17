@@ -1,0 +1,17 @@
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	title: string
+	sectionId?: string
+}
+
+const { title, sectionId, ...props } = Astro.props
+---
+
+<section
+	id={sectionId}
+	class={`mx-auto md:max-w-5xl grid gap-8 before:block before:h-14 -mt-14 ${props.class}`}
+	section-query={sectionId}
+>
+	{title && <h2 class='font-extrabold md:text-4xl text-3xl text-gray-800'>{title}</h2>}
+	<slot />
+</section>

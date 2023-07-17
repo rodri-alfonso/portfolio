@@ -1,0 +1,12 @@
+---
+import Link from './Link.astro'
+import BurguerMenu from '../../islands/BurguerMenu'
+---
+
+<nav class='lg:hidden flex items-center gap-2'>
+	<button id='contact-mobile'>
+		<Link>contact</Link>
+	</button>
+
+	<BurguerMenu client:visible />
+</nav>

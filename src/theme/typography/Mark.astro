@@ -1,0 +1,9 @@
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	text: string
+}
+
+const { text } = Astro.props
+---
+
+<em class='font-bold text-gray-950 not-italic'>{text}</em>

@@ -1,0 +1,18 @@
+---
+import { TECHNOLOGIES_ICONS_LIST } from '../config'
+import Section from '../layouts/Section.astro'
+import IconOrchester from '../components/IconOrchester.astro'
+---
+
+<Section title='Main Technologies' sectionId='experience'>
+	<div class='flex gap-1 gap-y-4 pt-4 flex-wrap items-center text-gray-500'>
+		{
+			TECHNOLOGIES_ICONS_LIST.map((icon) => (
+				<IconOrchester
+					icon={icon}
+					class='px-2.5 transition-all hover:text-gray-800 hover:scale-110 [&>*]:w-10 [&>*]:h-10'
+				/>
+			))
+		}
+	</div>
+</Section>

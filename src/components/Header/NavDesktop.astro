@@ -1,0 +1,34 @@
+---
+import Link from './Link.astro'
+import IconOrchester from 'components/IconOrchester.astro'
+import { EXTERNAL_LINKS } from 'config'
+---
+
+<nav class='flex items-center gap-2 max-lg:hidden'>
+	<Link href='/#about'>about</Link>
+	<Link href='/#experience'>experience</Link>
+	<Link href='/#projects'>projects</Link>
+	<Link href='mailto:rodrigo.alfonso.dev@gmail.com'>contact</Link>
+
+	<div class='h-5 border-solid border-gray-300 border'></div>
+	<!-- <Link href={EXTERNAL_LINKS.BLOG} target='_blank' class='flex items-center gap-2'>
+		blog
+		<IconOrchester icon='external-link' />
+	</Link> -->
+	<Link
+		class='bg-gray-100 text-gray-800 hover:text-white hover:bg-gray-800 rounded-lg'
+		href={EXTERNAL_LINKS.GITHUB}
+		target='_blank'
+		rel='noopener noreferrer'
+	>
+		<IconOrchester icon='github' />
+	</Link>
+	<Link
+		class='bg-gray-100 text-gray-800 hover:text-white hover:bg-gray-800 rounded-lg'
+		href={EXTERNAL_LINKS.LINKEDIN}
+		target='_blank'
+		rel='noopener noreferrer'
+	>
+		<IconOrchester icon='linkedin' />
+	</Link>
+</nav>

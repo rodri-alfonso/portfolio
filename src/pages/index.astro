@@ -5,6 +5,7 @@ import Experience from 'sections/Experience.astro'
 import Hero from 'sections/Hero.astro'
 import Projects from 'sections/Projects.astro'
 import Technologies from 'sections/Technologies.astro'
+import Observer from 'islands/Observer'
 ---
 
 <Page
@@ -16,4 +17,5 @@ import Technologies from 'sections/Technologies.astro'
 	<Experience />
 	<Technologies />
 	<Projects />
+	<Observer client:only />
 </Page>

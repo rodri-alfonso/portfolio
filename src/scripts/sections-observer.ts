@@ -4,7 +4,7 @@ const DEBOUNCE_TIME = 100
 const SECTION_QUERY_INDEX = 2
 const HERO_HASH = 'hero'
 
-const sectionsRef = Array.from(document.querySelectorAll('[section-query]')) as Array<HTMLElement>
+export const sectionsRef = Array.from(document.querySelectorAll('[section-query]')) as Array<HTMLElement>
 
 let prevAnchorRef: HTMLAnchorElement | null
 let prevHash: string = ''
@@ -37,11 +37,7 @@ function handleObserver(entries: Array<IntersectionObserverEntry>) {
 	}, DEBOUNCE_TIME)
 }
 
-const observer = new IntersectionObserver(handleObserver, {
+export const observer = new IntersectionObserver(handleObserver, {
 	threshold: Array.from({ length: 100 }, (_, x) => x / 100),
 	rootMargin: '-200px 0px -470px 0px',
 })
-
-for (let section of sectionsRef) {
-	observer.observe(section)
-}

@@ -14,7 +14,6 @@ function handleObserver(entries: Array<IntersectionObserverEntry>) {
 		entries.forEach((entry: IntersectionObserverEntry) => {
 			let hash: string = entry.target.attributes[SECTION_QUERY_INDEX].value
 
-			console.log('🚀 ~ file: sections-observer.ts:16 ~ hash:', hash)
 			const isOverHero = hash === HERO_HASH
 			const isOutIntersection = entry.intersectionRatio === 0
 

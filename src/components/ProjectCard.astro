@@ -2,10 +2,11 @@
 import IconOrchester from './IconOrchester.astro'
 
 import type { IProjectCard } from 'types'
+import Chip from './Chip.astro'
 
 export interface Props extends IProjectCard {}
 
-const { title, githubLink, demoLink, description } = Astro.props
+const { title, githubLink, demoLink, description, technologies } = Astro.props
 ---
 
 <div
@@ -35,4 +36,7 @@ const { title, githubLink, demoLink, description } = Astro.props
 	</div>
 
 	<p class='text-gray-600'>{description}</p>
+	<div class='flex gap-3 pb-2'>
+		{technologies.map((technology) => <Chip label={technology} class='bg-gray-600 text-gray-100' />)}
+	</div>
 </div>

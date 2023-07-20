@@ -6,15 +6,6 @@ import { PROJECTS_LIST } from '../config'
 
 <Section sectionId='projects' title='Featured Projects' class='gap-12'>
 	<div class='grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6'>
-		{
-			PROJECTS_LIST.map((project) => (
-				<ProjectCard
-					title={project.title}
-					description={project.description}
-					demoLink={project.demoLink}
-					githubLink={project.githubLink}
-				/>
-			))
-		}
+		{PROJECTS_LIST.map((project) => <ProjectCard {...project} />)}
 	</div>
 </Section>

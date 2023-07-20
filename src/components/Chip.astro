@@ -1,0 +1,11 @@
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	label: string
+}
+
+const { label, ...props } = Astro.props
+---
+
+<span class={`px-2 py-0.5 bg-gray-100 rounded-full text-xs font-semibold grid place-items-center ${props.class}`}
+	>{label}</span
+>

@@ -43,6 +43,7 @@ export interface IProjectCard {
 	description: string
 	demoLink: string
 	githubLink: string
+	technologies: Array<IconEnum>
 }
 
 export interface IExperienceItem {

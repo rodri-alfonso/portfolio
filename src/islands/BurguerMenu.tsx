@@ -39,7 +39,7 @@ export default function BurguerMenu() {
 						<MenuItem href='/#about' label='About' />
 						<MenuItem href='/#experience' label='Experience' />
 						<MenuItem href='/#projects' label='Projects' />
-						{/* <MenuItem href={EXTERNAL_LINKS.BLOG} target='_blank' rel='noopener noreferrer' label='Blog' /> */}
+						<MenuItem href={EXTERNAL_LINKS.BLOG} target='_blank' rel='noopener noreferrer' label='Blog' />
 						<MenuItem href={EXTERNAL_LINKS.LINKEDIN} target='_blank' rel='noopener noreferrer' label='Linkedin' />
 					</nav>
 				</div>

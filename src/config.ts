@@ -7,7 +7,7 @@ export const CONTACT_EMAIL = 'rodrigo.alfonso.mm@gmail.com'
 export const EXTERNAL_LINKS = {
 	LINKEDIN: 'https://www.linkedin.com/in/rodrigo-alfonso-/',
 	GITHUB: 'https://github.com/rodri-alfonso',
-	BLOG: 'https://blog-rodrigo.deno.dev/',
+	BLOG: 'https://www.roalf.dev',
 }
 
 export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [

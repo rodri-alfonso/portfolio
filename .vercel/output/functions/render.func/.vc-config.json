@@ -1,0 +1,5 @@
+{
+	"runtime": "nodejs16.x",
+	"handler": "dist/entry.mjs",
+	"launcherType": "Nodejs"
+}

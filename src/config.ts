@@ -31,6 +31,13 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 
 export const PROJECTS_LIST: Array<IProjectCard> = [
 	{
+		title: 'Pocket Planning',
+		description: 'A Scrum poker planner for your agile team.',
+		demoLink: 'https://pocket-planning.vercel.app',
+		githubLink: 'https://github.com/rodri-alfonso/pocket-planning',
+		technologies: ['nextjs', 'typescript', 'css'],
+	},
+	{
 		title: 'notion avatar generator',
 		description: 'Notion avatar generator by picture, using Cloudinary and IA recognition.',
 		demoLink: 'https://notionify.vercel.app/',
@@ -42,21 +49,21 @@ export const PROJECTS_LIST: Array<IProjectCard> = [
 		description: 'Demo of Tinder web based on mobile only to swipe, match and chat in realtime.',
 		demoLink: 'https://tinder-clone-pink.vercel.app/login',
 		githubLink: 'https://github.com/rodri-alfonso/tinder-clone-public',
-		technologies: ['nextjs', 'typescript'],
+		technologies: ['nextjs', 'javascript', 'react'],
 	},
 	{
 		title: 'instagram clone',
 		description: 'Demo of the Instagram feed, login, logout. Also create a post, comment and like it.',
 		demoLink: 'https://instagram-clone-liard-six.vercel.app',
 		githubLink: 'https://github.com/rodri-alfonso/instagram-clone-public',
-		technologies: ['nextjs', 'typescript'],
+		technologies: ['nextjs', 'javascript', 'react', 'css'],
 	},
 	{
 		title: 'whatsapp clone',
 		description: 'Demo of WhatsApp web to create a chat with any email and chat with messages in realtime.',
 		demoLink: 'https://whatsapp-clone-private.vercel.app',
 		githubLink: 'https://github.com/rodri-alfonso/whatsapp-clone-public',
-		technologies: ['nextjs', 'typescript'],
+		technologies: ['nextjs', 'typescript', 'css'],
 	},
 ]
 
@@ -68,7 +75,7 @@ export const EXPERIENCES_LIST: Array<IExperienceItem> = [
 			'Proposal and delivery of functionalities in the "Mi Movistar" application in web and mobile platforms.',
 			' Design, analysis and writing of scalable and reusable frontend interfaces.',
 			'Continuous iteration on high impact functionalities for recurring users and experience optimization.',
-			'Maintenance of UI components library and tools for different teams.',
+			'Maintenance of UI components library, a design system, and tools for different teams.',
 		],
 		accomplishments: [],
 	},

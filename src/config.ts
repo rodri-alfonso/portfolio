@@ -34,7 +34,7 @@ export const TECHNOLOGIES_ICONS_LIST: Array<IconEnum> = [
 export const PROJECTS_LIST: Array<IProjectCard> = [
 	{
 		title: 'Pocket',
-		description: 'A Scrum poker planner in real time for you agile teams.',
+		description: 'A Scrum poker planner in real time for agile teams.',
 		demoLink: 'https://pocket-planning.vercel.app',
 		githubLink: 'https://github.com/rodri-alfonso/pocket-planning',
 		technologies: ['nextjs', 'tailwindcss', 'firebase'],

@@ -22,6 +22,8 @@ export type IconEnum =
 	| 'source'
 	| 'external-link'
 	| 'expand'
+	| 'firebase'
+	| 'tailwindcss'
 
 interface Origin {
 	x: number

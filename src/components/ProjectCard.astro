@@ -20,7 +20,7 @@ const { title, githubLink, demoLink, description, technologies } = Astro.props
 				href={demoLink}
 				target='_blank'
 				rel='noopener noreferrer'
-				class='p-2 text-gray-700 hover:bg-gray-200 rounded-lg'
+				class='p-1 text-gray-700 hover:bg-gray-200 rounded-lg active:scale-95 transition-all'
 			>
 				<IconOrchester icon='link' class='[&>*]:w-7 [&>*]:h-7' />
 			</a>
@@ -28,7 +28,7 @@ const { title, githubLink, demoLink, description, technologies } = Astro.props
 				href={githubLink}
 				target='_blank'
 				rel='noopener noreferrer'
-				class='p-2 text-gray-700 hover:bg-gray-200 rounded-lg'
+				class='p-1 text-gray-700 hover:bg-gray-200 rounded-lg active:scale-95 transition-all'
 			>
 				<IconOrchester icon='github' class='[&>*]:w-7 [&>*]:h-7' />
 			</a>
@@ -36,7 +36,7 @@ const { title, githubLink, demoLink, description, technologies } = Astro.props
 	</div>
 
 	<p class='text-gray-600'>{description}</p>
-	<div class='flex gap-3 pb-2'>
+	<div class='flex gap-1.5 pb-2'>
 		{technologies.map((technology) => <Chip label={technology} class='bg-gray-600 text-gray-100' />)}
 	</div>
 </div>

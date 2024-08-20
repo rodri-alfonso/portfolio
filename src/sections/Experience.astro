@@ -11,7 +11,7 @@ import ButttonResume from 'islands/ButtonResume'
 	</div>
 	<div class='grid gap-16 pt-12'>
 		{
-			EXPERIENCES_LIST.map((experience) => (
+			EXPERIENCES_LIST.slice(0, 3).map((experience) => (
 				<ExperienceItem title={experience.title} time={experience.fromTo} items={experience.responsabilities} />
 			))
 		}

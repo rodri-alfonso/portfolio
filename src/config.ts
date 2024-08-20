@@ -71,12 +71,22 @@ export const PROJECTS_LIST: Array<IProjectCard> = [
 
 export const EXPERIENCES_LIST: Array<IExperienceItem> = [
 	{
-		title: 'Frontend Engineer at Movistar (+Applica)',
-		fromTo: 'Nov, 2021 - Present',
+		title: 'Frontend Engineer at Applica',
+		fromTo: 'Nov, 2023 - Present',
 		responsabilities: [
-			'Proposal and delivery of functionalities in the "Mi Movistar" application in web and mobile platforms.',
-			' Design, analysis and writing of scalable and reusable frontend interfaces.',
-			'Continuous iteration on high impact functionalities for recurring users and experience optimization.',
+			'Plan tasks, make a user story mapping, burn up and burn down chart to follow daily metrics to reach the committed deadline date.',
+			'Organize and lead the team, making an important link between Backend, Frontend, Experience Design and Quality team roles.',
+			' Write scalable and quality code, using modern technologies and best practices.',
+		],
+		accomplishments: [],
+	},
+	{
+		title: 'Frontend Engineer at Movistar',
+		fromTo: 'Nov, 2021 - 2023',
+		responsabilities: [
+			'Planning, development, and delivery of B2C functionalities in the "Mi Movistar" application on web and mobile platforms.',
+			'Design, analysis and coding of intuitive, scalable and reusable frontend interfaces.',
+			'Continuous iteration on functionalities with high user concurrences and optimization of experiences based on NPS metrics.',
 			'Maintenance of UI components library, a design system, and tools for different teams.',
 		],
 		accomplishments: [],

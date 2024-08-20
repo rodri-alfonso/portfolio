@@ -7,7 +7,7 @@ export default function ButttonResume() {
 			href={`/${NAVIGATOR_LANG}_CV_RODRIGO_ALFONSO.pdf`}
 			class='px-3 py-2 rounded-lg uppercase bg-gray-800 hover:bg-white hover:text-black border-2 border-gray-800 text-white font-semibold transition-all active:scale-95'
 		>
-			<p>check resume</p>
+			<p>check full resume</p>
 		</a>
 	)
 }

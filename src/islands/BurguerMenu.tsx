@@ -8,7 +8,7 @@ export default function BurguerMenu() {
   } transition ease transform duration-300`
 
   const MenuItem = ({ label, ...props }: any) => (
-    <a class='hover:bg-gray-800 py-2 px-6 rounded-lg transition-all active:scale-95' {...props}>
+    <a class='hover:bg-gray-900 py-2 px-6 rounded-lg transition-all active:scale-95' {...props}>
       {label}
     </a>
   )
